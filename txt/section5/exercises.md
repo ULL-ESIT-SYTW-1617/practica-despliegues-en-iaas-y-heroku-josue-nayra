@@ -3,110 +3,98 @@ Plugin Exercises!
 
 Este plugin permite introducir ejercicios interactivos, a modo de que el lector pueda, por ejemplo, escribir la solución de un problema para posteriormente el autor del gitbook pueda verificarla y validarla.
 
-¿Cómo podemos instalar este plugin?
--------------
-- Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
+>- #### primary::¿Cómo podemos instalar este plugin?
+>
+> Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
+>
+``` $ npm install gitbook-plugin-exercises --save-dev ```
 
-```
-$ npm install gitbook-plugin-exercises --save-dev
-```
-
-- Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
-
+> Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
+>
 ``` 
-{
-    "plugins": ["exercises"]
-}
+{  
+  "plugins": ["exercises"]
+} 
 ```
 
-- Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
+> Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
+>
+``` $ gitbook install ```
 
+<hr />
+
+>- #### primary::¿Cómo podemos usar este plugin? 
+> Definición, sintaxis y estructura
+
+> Cada ejercicio debe definirse siguiente la siguiente estructura basada en 4 partes fundamentales:
+
+> - Mensaje u objetivo del ejercicio:
+
+> 
+```
+{ % exercise % }
+"Mensaje o enunciado del ejercicio"
 ```
 
-$ gitbook install
 
+> - Código inicial que se muestra al usuario. Punto de partida:
+>
 ```
-
-¿Cómo podemos usar este plugin?
--------------
-
-- Definición, sintaxis y estructura
-
-Cada ejercicio debe definirse siguiente la siguiente estructura basada en 4 partes fundamentales:
-
-> 1.- Mensaje u objetivo del ejercicio:
-
-
-```
-  {% exercise %}
- "Mensaje o enunciado del ejercicio"
-
-```
-
-> 2.- Código inicial que se muestra al usuario. Punto de partida:
-
-```
-  {% initial %}
+  { % initial % }
   "Condiciones y datos iniciales que se muestran al usuario para que resuelta el mensaje"
 ```
-> 3.- Solucion del ejercicio
-
+> - Solucion del ejercicio
+>
 ```
-  {% validation %}
+  { % validation % }
   "Solucion del ejercicio"
-
 ```
 
-> 4.- Código de validación de resultado
-
+> - Código de validación de resultado
+>
 ```
-  {% context %}
+  { % context % }
   "Código que comprueba si el resultado del usuario es correcto"
-
 ```
 
-> 5.- Fin del ejercicio
-
+> - Fin del ejercicio
+>
 ```
-{% endexercise %}
-
+{ % endexercise % }
 ```
 
-Ejemplo
--------------
+<hr />
 
-- Codigo
+>- #### primary::Ejemplo
 
+>- Codigo
+>
 ```
-{% exercise %}
+{ % exercise % }
 Definir una variable res que contenga el resultado de la siguiente operacion: (5-4).
-{% initial %}
+{ % initial % }
 var res =
-{% solution %}
+{ % solution % }
 var resultado = 1;
-{% validation %}
+{ % validation % }
 assert(resultado == 1);
-{% context %}
-
+{ % context % }
 function magicFunc() {
     return 3;
 }
-{% endexercise %}
-
+{ % endexercise % }
+>
 ```
-{% exercise %}
+{ % exercise % }
 Definir una variable res que contenga el resultado de la siguiente operacion: (5-4).
-{% initial %}
+{ % initial % }
 var resultado =
-{% solution %}
+{ % solution % }
 var resultado = 1;
-{% validation %}
+{ % validation % }
 assert(resultado == 1);
-{% context %}
-
+{ % context % }
 function magicFunc() {
     return 3;
 }
-{% endexercise %}
-
-
+{ % endexercise % }

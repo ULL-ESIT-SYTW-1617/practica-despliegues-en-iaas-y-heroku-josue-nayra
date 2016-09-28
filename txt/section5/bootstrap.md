@@ -34,34 +34,69 @@ $ gitbook install
 - Definición y sintaxis
 
 ```
-#### type:: Title
+#### [type]::Title
 
 ```
 
 - Llamadas soportadas:
 
->- #### primary::Title
->- #### success::Title
->- #### danger::Title
->- #### warning::Title
->- #### info::Title
-
-
-Ejemplos
--------------
-
-- Codigo del plugin
-
 ```
-#### primary::Title
-
+### default:: Titulo bloque
 ```
 
-> #### primary::Title
-Esto es una prueba para usar el plugin bootstrap del Gitbook
-> Content
+>- #### default::Estilo por defecto
+>
+>Esto es un ejemplo de uso del plugin "Boostrap" para gitbook. Estilo por defecto.  
 
-- Video
+<hr />
+
+``` 
+#### primary::Estilo "Primary"
+```
+
+>- #### primary::Estilo "Primary"  
+>
+> Esto es un ejemplo de uso del plugin "Boostrap" para gitbook. Estilo "Primary".  
+
+<hr />
+
+``` 
+#### success::Estilo "Success"
+```
+
+>- #### success::Estilo "Success"  
+>
+>Esto es un ejemplo de uso del plugin "Boostrap" para gitbook. Estilo "Success".  
+
+<hr />
+
+``` 
+#### danger::Estilo "Danger"
+```
+>- #### danger::Estilo "Danger"
+>
+>Esto es un ejemplo de uso del plugin "Boostrap" para gitbook. Estilo "Danger".  
+
+<hr />
+
+``` 
+#### warning::Estilo "Warning"
+```
+>- #### warning::Estilo "Warning"
+>
+>Esto es un ejemplo de uso del plugin "Boostrap" para gitbook. Estilo "Warning".  
+    
+<hr />
+
+``` 
+#### info::Estilo "Info"
+```
+>- #### info::Estilo "Info"
+>
+>Esto es un ejemplo de uso del plugin "Boostrap" para gitbook. Estilo "Info".  
+
+
+
 
 
 

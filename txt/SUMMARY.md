@@ -17,4 +17,4 @@ Este es el indice de nuestro gitbook.
 * [Gitbook Plugins](section5/gitbook.md)
     *  [Exercises](section5/exercises.md)
     *  [Youtube](section5/youtube.md)
-    *  [Disqus](section5/disqus.md)
+    *  [Bootstrap](section5/bootstrap.md)
