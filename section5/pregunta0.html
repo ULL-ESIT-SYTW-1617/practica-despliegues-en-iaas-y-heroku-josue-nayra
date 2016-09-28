@@ -391,30 +391,32 @@ Entre estas funcionalidades destacan: incorporar videos de Youtube, ejercicios, 
 Podemos encontrar los Gitbook plugins que nos interesen en [plugins.gitbook.com][1]</p>
 <h2 id="&#xBF;c&#xF3;mo-podemos-instalar-un-plugin">&#xBF;C&#xF3;mo podemos instalar un plugin?</h2>
 <ul>
-<li><p>Creamos fichero <strong>book.json</strong> siguiendo la estructura:
-```
-{
-  &quot;gitbook&quot;: &quot;0.0.1&quot;,
-  &quot;title&quot;: &quot;Gitbook para apuntes. Asignatura SYTW16-17&quot;,
-  &quot;plugins&quot;: [],
-  &quot;structure&quot;: {</p>
-<p>  },
-  &quot;pluginsConfig&quot;: {</p>
-<p>  }
-}</p>
-</li>
+<li>Creamos fichero <strong>book.json</strong> siguiendo la estructura:</li>
 </ul>
-<pre><code>- A continuaci&#xF3;n, debemos instalarlo con el comando **npm install**:
-</code></pre><p> npm install  &quot;nombre del plugin&quot; --save-dev</p>
-<pre><code>- Una vez que encontremos el plugin que necesitamos, debemos a&#xF1;adirlo a nuestro fichero book.json:
-</code></pre><p>{
+<pre><code>{
+    &quot;gitbook&quot;: &quot;0.0.1&quot;,
+    &quot;title&quot;: &quot;Gitbook para apuntes. Asignatura SYTW16-17&quot;,
+    &quot;plugins&quot;: [],
+    &quot;structure&quot;: {
+
+    },
+    &quot;pluginsConfig&quot;: {
+
+    }
+}
+</code></pre><ul>
+<li>A continuaci&#xF3;n, debemos instalarlo con el comando <strong>npm install</strong>:</li>
+</ul>
+<pre><code> npm install  &quot;nombre del plugin&quot; --save-dev
+</code></pre><ul>
+<li>Una vez que encontremos el plugin que necesitamos, debemos a&#xF1;adirlo a nuestro fichero book.json: </li>
+</ul>
+<pre><code>{
     &quot;plugins&quot;: [&quot;plugin 1&quot;, &quot;plugin 2&quot;]
-}</p>
-<pre><code>
-Los Gitbook Plugins son instalados autom&#xE1;ticamente en [Gitbook.com][2]. Localmente, podemos ejecutar el siguiente comando para instalar y preparar todos los plugins para nuestros libros:
-</code></pre><p>$ gitbook install</p>
-<p>``` </p>
-<p>[1]:
+}
+</code></pre><p>Los Gitbook Plugins son instalados autom&#xE1;ticamente en [Gitbook.com][2]. Localmente, podemos ejecutar el siguiente comando para instalar y preparar todos los plugins para nuestros libros:</p>
+<pre><code>$ gitbook install
+</code></pre><p>[1]:
     <a href="http://plugins.gitbook.com" target="_blank">http://plugins.gitbook.com</a></p>
 <p>[2]:
     <a href="http://www.Gitbook.com" target="_blank">http://www.Gitbook.com</a></p>
@@ -461,7 +463,7 @@ Los Gitbook Plugins son instalados autom&#xE1;ticamente en [Gitbook.com][2]. Loc
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gitbook Plugins","level":"1.6","depth":1,"next":{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/pregunta1.md","ref":"section5/pregunta1.md","articles":[]},"previous":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/pregunta1.md","ref":"section4/pregunta1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[""],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section5/pregunta0.md","mtime":"2016-09-28T10:02:02.304Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-28T10:05:23.785Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitbook Plugins","level":"1.6","depth":1,"next":{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/pregunta1.md","ref":"section5/pregunta1.md","articles":[]},"previous":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/pregunta1.md","ref":"section4/pregunta1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[""],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section5/pregunta0.md","mtime":"2016-09-28T10:09:00.807Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-28T10:12:01.678Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
