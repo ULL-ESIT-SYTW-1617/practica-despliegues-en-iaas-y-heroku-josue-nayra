@@ -7,7 +7,6 @@ Este es el indice de nuestro gitbook.
     * [Expressjs](section1/expressjs.md)
     * [Fichero package.json](section1/packagejson.md)
 * [Git](section2/git.md)
-    * [Instalando git](section2/instalandogit.md)
 * [Gitbook](section3/gitbook.md)
     * [¿Qué es Gitbook y cómo se utiliza?](section3/que_es_gitbook.md)
     * [¿Qué son las gh-pages y cómo se utilizan?](section3/gh_pages.md)
