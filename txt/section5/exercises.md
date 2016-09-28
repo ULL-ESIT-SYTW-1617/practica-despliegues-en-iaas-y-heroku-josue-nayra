@@ -31,30 +31,30 @@ Cada ejercicio debe definirse siguiente la siguiente estructura basada en 4 part
 
 
 ```
->> {% exercise %}
->> "Mensaje o enunciado del ejercicio"
+  {% exercise %}
+ "Mensaje o enunciado del ejercicio"
 
 ```
 
 > 2.- Código inicial que se muestra al usuario. Punto de partida:
 
 ```
->> {% initial %}
->> "Condiciones y datos iniciales que se muestran al usuario para que resuelta el mensaje"
+  {% initial %}
+  "Condiciones y datos iniciales que se muestran al usuario para que resuelta el mensaje"
 ```
 > 3.- Solucion del ejercicio
 
 ```
->> {% validation %}
->> "Solucion del ejercicio"
+  {% validation %}
+  "Solucion del ejercicio"
 
 ```
 
 > 4.- Código de validación de resultado
 
 ```
->> {% context %}
->> "Código que comprueba si el resultado del usuario es correcto"
+  {% context %}
+  "Código que comprueba si el resultado del usuario es correcto"
 
 ```
 
@@ -90,7 +90,7 @@ function magicFunc() {
 {% exercise %}
 Definir una variable res que contenga el resultado de la siguiente operacion: (5-4).
 {% initial %}
-var res =
+var resultado =
 {% solution %}
 var resultado = 1;
 {% validation %}
