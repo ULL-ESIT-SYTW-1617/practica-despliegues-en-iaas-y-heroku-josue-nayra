@@ -179,25 +179,6 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" data-path="../section2/instalandogit.html">
-            
-                <a href="../section2/instalandogit.html">
-            
-                    
-                    Instalando git
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="1.4" data-path="../section3/gitbook.html">
@@ -330,12 +311,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="bootstrap.html">
+        <li class="chapter " data-level="1.6.3" data-path="disqus.html">
             
-                <a href="bootstrap.html">
+                <a href="disqus.html">
             
                     
-                    Bootstrap
+                    Disqus
             
                 </a>
             
@@ -395,21 +376,38 @@
                                 
                                 <h1 id="plugin-exercises">Plugin Exercises!</h1>
 <p>Este plugin permite introducir ejercicios interactivos, a modo de que el lector pueda, por ejemplo, escribir la soluci&#xF3;n de un problema para posteriormente el autor del gitbook pueda verificarla y validarla.</p>
-<div class="callout callout-primary"><h4 id="&#xBF;c&#xF3;mo-podemos-instalar-este-plugin">&#xBF;C&#xF3;mo podemos instalar este plugin?</h4><div><p>Debemos instalar el siguiente paquete  y a&#xF1;adirlo a nuestro package.json:</p><p><code>$ npm install gitbook-plugin-exercises --save-dev</code></p><p>Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json</p><pre><code class="lang-undefined">{  
-  &quot;plugins&quot;: [&quot;exercises&quot;]
-}
-</code></pre><p>Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:</p><p><code>$ gitbook install</code></p></div></div>
-<hr>
-
-<div class="callout callout-success"><h4 id="&#xBF;c&#xF3;mo-podemos-usar-este-plugin">&#xBF;C&#xF3;mo podemos usar este plugin?</h4><div><p>Cada ejercicio debe definirse siguiente la siguiente estructura basada en 4 partes fundamentales:</p><ul>
-<li>Mensaje u objetivo del ejercicio:</li>
-</ul></div></div>
-<pre><code class="lang-undefined">{% exercise %}
-&quot;Mensaje o enunciado del ejercicio&quot;
+<h2 id="&#xBF;c&#xF3;mo-podemos-instalar-este-plugin">&#xBF;C&#xF3;mo podemos instalar este plugin?</h2>
+<ul>
+<li>Debemos instalar el siguiente paquete  y a&#xF1;adirlo a nuestro package.json:</li>
+</ul>
+<pre><code class="lang-undefined">$ npm install gitbook-plugin-exercises --save-dev
 </code></pre>
 <ul>
-<li>C&#xF3;digo inicial que se muestra al usuario. Punto de partida:</li>
+<li>Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json</li>
 </ul>
+<pre><code class="lang-undefined">{
+    &quot;plugins&quot;: [&quot;exercises&quot;]
+}
+</code></pre>
+<ul>
+<li>Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:</li>
+</ul>
+<pre><code class="lang-undefined">$ gitbook install
+</code></pre>
+<h2 id="&#xBF;c&#xF3;mo-podemos-usar-este-plugin">&#xBF;C&#xF3;mo podemos usar este plugin?</h2>
+<ul>
+<li>Definici&#xF3;n, sintaxis y estructura</li>
+</ul>
+<p>Cada ejercicio debe definirse siguiente la siguiente estructura basada en 4 partes fundamentales:</p>
+<blockquote>
+<p>1.- Mensaje u objetivo del ejercicio:</p>
+</blockquote>
+<pre><code class="lang-undefined">{% exercise %}
+ &quot;Mensaje o enunciado del ejercicio&quot;
+</code></pre>
+<blockquote>
+<p>2.- C&#xF3;digo inicial que se muestra al usuario. Punto de partida:</p>
+</blockquote>
 <pre><code class="lang-undefined">{% initial %}
   &quot;Condiciones y datos iniciales que se muestran al usuario para que resuelta el mensaje&quot;
 </code></pre>
@@ -522,7 +520,7 @@ Definir una variable res que contenga el resultado de la siguiente operacion: (5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.6.1","depth":2,"next":{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},"previous":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section5/exercises.md","mtime":"2016-09-28T19:25:12.378Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-28T19:28:41.239Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exercises","level":"1.6.1","depth":2,"next":{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},"previous":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Disqus","level":"1.6.3","depth":2,"path":"section5/disqus.md","ref":"section5/disqus.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section5/exercises.md","mtime":"2016-09-28T17:06:20.948Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-28T19:31:19.099Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

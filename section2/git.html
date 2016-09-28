@@ -65,7 +65,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="instalandogit.html" />
+    <link rel="next" href="../section3/gitbook.html" />
     
     
     <link rel="prev" href="../section1/packagejson.html" />
@@ -178,25 +178,6 @@
                 </a>
             
 
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.3.1" data-path="instalandogit.html">
-            
-                <a href="instalandogit.html">
-            
-                    
-                    Instalando git
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -330,12 +311,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../section5/bootstrap.html">
+        <li class="chapter " data-level="1.6.3" data-path="../section5/disqus.html">
             
-                <a href="../section5/bootstrap.html">
+                <a href="../section5/disqus.html">
             
                     
-                    Bootstrap
+                    Disqus
             
                 </a>
             
@@ -393,7 +374,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="git">Git</h2>
+<p>Es un software de control de versiones dise&#xF1;ado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando &#xE9;stas tienen un gran n&#xFA;mero de archivos de c&#xF3;digo fuente.</p>
+<p>Git es f&#xE1;cil de aprender con un rendimiento muy r&#xE1;pido, permitiendo m&#xFA;ltiples flujos de trabajo en un mismo proyecto.</p>
+<h4 id="descarga-e-instalaci&#xF3;n">Descarga e instalaci&#xF3;n</h4>
+<blockquote>
+<p>Windows</p>
+</blockquote>
+<p>Git para Windows se centra en ofrecer un conjunto nativo de herramientas que traen el conjunto completo de caracter&#xED;sticas de Git a Windows, 
+proporciona interfaces de usuario adecuadas para los usuarios Git. Proporciona una emulaci&#xF3;n BASH para ejecutar Git desde la l&#xED;nea de comandos, 
+aunque tambi&#xE9;n proporciona una interfaz grafica de usuario como alternativa a la BASH.</p>
+<blockquote>
+<p>Linux</p>
+</blockquote>
+<pre><code class="lang-undefined">$ apt-get install git
+</code></pre>
+<h4 id="flujo-de-trabajo"><i class="icon-folder-open"></i> Flujo de trabajo</h4>
+<p>El repositorio local esta compuesto por tres &quot;&#xE1;rboles&quot; administrados por git. El primero es tu Directorio de trabajo que contiene los archivos, el segundo es el Index que actua como una zona intermedia, y el &#xFA;ltimo es el HEAD que apunta al &#xFA;ltimo commit realizado.</p>
+<p><img src="../images/trees.png" alt="Imagen"></p>
+<h4 id="comandos-m&#xE1;s-importantes">Comandos m&#xE1;s importantes</h4>
+<p><strong>Crear un nuevo repositorio</strong></p>
+<pre><code class="lang-undefined">git init
+</code></pre>
+<p><strong>Clonar un repositorio existente</strong></p>
+<p>Crea una copia local del repositorio ejecutando...</p>
+<pre><code class="lang-undefined">git clone /path/to/repository
+</code></pre>
+<p>Para un servidor remoto ejecutar...</p>
+<pre><code class="lang-undefined">git clone username@host:/path/to/repository
+</code></pre>
+<p><strong>Add y Commit</strong></p>
+<p>Registrar cambios a&#xF1;adiendolos al Index mediante el comando:</p>
+<pre><code class="lang-undefined">git add &lt;filename&gt;   o    git add .
+</code></pre>
+<p>Incluir el archivo en el Head haciendo commit a los cambios (a&#xFA;n no en el repositorio):</p>
+<pre><code class="lang-undefined">git commit -m &quot;Commit message&quot;
+</code></pre>
+<p><strong>A&#xF1;adir los cambios</strong></p>
+<p>A&#xF1;adir los cambios al repositorio remoto:</p>
+<pre><code class="lang-undefined">git push origin master
+</code></pre>
+<p>Siendo master la rama en la cual queremos enviar los cambios.</p>
+<p><strong>Actualizar y fusionar los cambios</strong></p>
+<p>Actualizar el repositorio local al commit m&#xE1;s nuevo para bajar y fusionar los cambios remotos.</p>
+<pre><code class="lang-undefined">git pull
+</code></pre>
+<p>Para fusionar otra rama a tu rama activa (master en este caso):</p>
+<pre><code class="lang-undefined">git merge &lt;branch&gt;
+</code></pre>
+<p>Git permite practicar con sus comandos y aprender a la vez. 
+En el siguiente enlace: <a href="https://try.github.io/levels/1/challenges/3" target="_blank">https://try.github.io/levels/1/challenges/3</a></p>
+
                                 
                                 </section>
                             
@@ -425,7 +456,7 @@
                 </a>
                 
                 
-                <a href="instalandogit.html" class="navigation navigation-next " aria-label="Next page: Instalando git">
+                <a href="../section3/gitbook.html" class="navigation navigation-next " aria-label="Next page: Gitbook">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -436,7 +467,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.3","depth":1,"next":{"title":"Instalando git","level":"1.3.1","depth":2,"path":"section2/instalandogit.md","ref":"section2/instalandogit.md","articles":[]},"previous":{"title":"Fichero package.json","level":"1.2.3","depth":2,"path":"section1/packagejson.md","ref":"section1/packagejson.md","articles":[]},"dir":"neutral"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section2/git.md","mtime":"2016-09-26T18:13:22.967Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-28T19:28:41.239Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.3","depth":1,"next":{"title":"Gitbook","level":"1.4","depth":1,"path":"section3/gitbook.md","ref":"section3/gitbook.md","articles":[{"title":"¿Qué es Gitbook y cómo se utiliza?","level":"1.4.1","depth":2,"path":"section3/que_es_gitbook.md","ref":"section3/que_es_gitbook.md","articles":[]},{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.2","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},{"title":"Desplegando un libro en gitbook","level":"1.4.3","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]}]},"previous":{"title":"Fichero package.json","level":"1.2.3","depth":2,"path":"section1/packagejson.md","ref":"section1/packagejson.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section2/git.md","mtime":"2016-09-28T19:29:18.305Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-28T19:31:19.099Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
