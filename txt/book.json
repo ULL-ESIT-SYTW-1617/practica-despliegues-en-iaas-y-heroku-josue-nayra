@@ -1,7 +1,7 @@
 {
     "gitbook": "3.1.1",
     "title": "Gitbook para apuntes. Asignatura SYTW16-17",
-    "plugins": [""],
+    "plugins": ["exercises"],
     "structure": {
         "readme": "README.md"
     },

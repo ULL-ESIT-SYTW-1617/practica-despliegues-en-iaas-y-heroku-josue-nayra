@@ -35,6 +35,10 @@
     "gh-pages": "^0.3.1",
     "gitbook": "^2.1.0",
     "gitbook-cli": "^0.3.4",
-    "gitbook-plugin-codeblock-label": "^1.0.1"
+    "gitbook-plugin-codeblock-label": "^1.0.1",
+    "gitbook-plugin-exercises": "^2.1.1"
+  },
+  "dependencies": {
+    "gitbook-plugin-exercises": "^2.1.1"
   }
 }
