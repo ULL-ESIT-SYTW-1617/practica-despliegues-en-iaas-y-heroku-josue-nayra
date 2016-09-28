@@ -19,6 +19,13 @@ $ npm install gitbook-plugin-exercises --save-dev
 }
 ```
 
+- Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
+
+```
+
+$ gitbook install
+
+```
 
 ¿Cómo podemos usar este plugin?
 -------------

@@ -20,6 +20,13 @@ $ npm install gitbook-plugin-youtube --save-dev
 }
 ```
 
+- Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
+
+```
+
+$ gitbook install
+
+```
 
 ¿Cómo podemos usar este plugin?
 -------------
@@ -38,16 +45,15 @@ $ npm install gitbook-plugin-youtube --save-dev
 Ejemplo
 -------------
 
-- Codigo
+- Codigo del plugin
 
 ```
-{% youtube %}
-https://www.youtube.com/watch?v=kdpfRLpu0FQ
-{% endyoutube %}
+{% youtube %}https://www.youtube.com/watch?v=kdpfRLpu0FQ{% endyoutube %}
 
 ```
-{% youtube %}
-https://www.youtube.com/watch?v=kdpfRLpu0FQ
-{% endyoutube %}
+
+- Video
+
+{% youtube %}http://www.youtube.com/watch?v=kdpfRLpu0FQ{% endyoutube %}
 
 
