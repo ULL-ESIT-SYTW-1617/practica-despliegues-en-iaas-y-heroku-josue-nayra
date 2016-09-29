@@ -7,19 +7,23 @@ Este plugin permite introducir ejercicios interactivos, a modo de que el lector 
 >
 > Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
 >
-``` $ npm install gitbook-plugin-exercises --save-dev ```
+```bash
+$ npm install gitbook-plugin-exercises --save-dev 
+```
 
 > Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
 >
-``` 
+```json 
 {  
   "plugins": ["exercises"]
 } 
 ```
 
 > Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
->
-``` $ gitbook install ```
+>bash
+```
+$ gitbook install 
+```
 
 <hr />
 

@@ -13,6 +13,9 @@ gulp.task('construir_gitbook', function()
            "./scripts/losh generate-wiki"
         ]))
         .pipe(shell([
+            "./scripts/losh deploy-gitbook"
+        ]))
+        .pipe(shell([
             "./scripts/losh deploy-wiki"    
         ]))
 });

@@ -9,7 +9,7 @@ Podemos encontrar los Gitbook plugins que nos interesen en [Plugins Gitbook](htt
 
 > - Creamos fichero **book.json** siguiendo la estructura:
 >
-```
+```json
 {
     "gitbook": "0.0.1",
     "title": "Gitbook para apuntes. Asignatura SYTW16-17",
@@ -23,13 +23,13 @@ Podemos encontrar los Gitbook plugins que nos interesen en [Plugins Gitbook](htt
 
 > - A continuación, debemos instalarlo con el comando **npm install**:
 >
-```
+```bash
  npm install  "nombre del plugin" --save-dev
 ```
 
 > - Una vez que encontremos el plugin que necesitamos, debemos añadirlo a nuestro fichero book.json: 
 >
-```
+```json
 {
 	"plugins": ["plugin 1", "plugin 2"]
 }
@@ -37,6 +37,6 @@ Podemos encontrar los Gitbook plugins que nos interesen en [Plugins Gitbook](htt
 
 > Los Gitbook Plugins son instalados automáticamente en [Gitbook.com](http://www.gitbook.com). Localmente, podemos ejecutar el siguiente comando para instalar y preparar todos los plugins para nuestros libros:
 >
-```
+```bash
 $ gitbook install
 ``` 

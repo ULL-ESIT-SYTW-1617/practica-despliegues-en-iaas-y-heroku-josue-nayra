@@ -12,13 +12,13 @@ $ npm install gitbook-plugin-youtube --save-dev
 ```
 > - Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
 >
-``` 
+```json   
 {
     "plugins": ["youtube"] 
 }
 ```
 > - Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
-```
+```bash
 $ gitbook install
 ```
 
@@ -29,7 +29,7 @@ $ gitbook install
 > Definición y sintaxis
 >
 ``` 
-{% youtube %}"Enlace de Youtube"{% endyoutube %}
+{ % youtube % }"Enlace de Youtube"{ % endyoutube % }
 ```
 
 <hr />
