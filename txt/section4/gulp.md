@@ -8,7 +8,7 @@ tareas comunes manualmente.
 Está construido con Javascript, funcionando sobre Node.js
 Además, es de Open Source, de modo que su código fuente es accesible desde github a partir de este [enlace](https://github.com/gulpjs/gulp/).
 
->- #### danger::Ventajas
+>- #### primary::Ventajas
 >-Fácil de usar:  Tareas complejas que se convierten en otras más manejables. 
 >-Eficiente: Construcciones más rápidas, sin necesidad de escribir archivos intermedios en el disco.
 En definitiva, comparandolo con [Grunt.js](http://gruntjs.com/), realizará las mismas operaciones pero en menos tiempo y
@@ -28,7 +28,7 @@ de nuestra app sea más sencilla.
 
 <hr />
 
->- #### danger::Funcionamiento de Gulp.js
+>- #### primary::Funcionamiento de Gulp.js
 
 > 1.- Instalación de Gulp.js
 >
@@ -68,7 +68,7 @@ $ gulp "nombre_tarea"
 
 <hr />
 
->- #### danger::Enlaces e interés
+>- #### primary::Enlaces e interés
 
 > 1.- [Ejemplo sencillo de creación de gulpfile](https://frontendlabs.io/1669--gulp-js-en-espanol-tutorial-basico-primeros-pasos-y-ejemplos)  
 
@@ -78,5 +78,5 @@ $ gulp "nombre_tarea"
 
 <hr />
 
->- #### danger::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
-{ % youtube % }https://www.youtube.com/watch?v=wNlEK8qrb0M&index=1&list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos{ % endyoutube % }
+>- #### primary::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
+{% youtube %}https://www.youtube.com/watch?v=wNlEK8qrb0M&index=1&list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos{% endyoutube %}

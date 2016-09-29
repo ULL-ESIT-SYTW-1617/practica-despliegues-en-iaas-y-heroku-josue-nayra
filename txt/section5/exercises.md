@@ -85,16 +85,16 @@ function magicFunc() {
 { % endexercise % }
 ```
   
-{ % exercise % }
+{% exercise %}
 Definir una variable res que contenga el resultado de la siguiente operacion: (5-4).
-{ % initial % }
-var resultado =
-{ % solution % }
+{% initial %}
+var resultado=
+{% solution %}
 var resultado = 1;
-{ % validation % }
+{% validation %}
 assert(resultado == 1);
-{ % context % }
-function magicFunc() {
+{% context %}
+function magicFunc(){
     return 3;
 }
-{ % endexercise % }
+{% endexercise %}

@@ -2,7 +2,7 @@ Plugin Youtube!
 ==============  
 Este plugin permite introducir contenidos del sitio web [Youtube](http://www.youtube.com), como por ejemplo, videos.
 
->- #### danger::¿Cómo podemos instalar este plugin?
+>- #### primary::¿Cómo podemos instalar este plugin?
 
 > - Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
 >
@@ -24,7 +24,7 @@ $ gitbook install
 
 <hr />
 
->- #### danger::¿Cómo podemos usar este plugin?
+>- #### primary::¿Cómo podemos usar este plugin?
 
 > - Definición y sintaxis
 >
@@ -36,7 +36,7 @@ $ gitbook install
 
 <hr />
 
->- #### danger::Ejemplo
+>- #### primary::Ejemplo
 
 > - Codigo del plugin
 >
