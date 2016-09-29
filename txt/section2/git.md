@@ -69,7 +69,7 @@ $ git commit -m "Commit message"
 >  Añadir los cambios al repositorio remoto:
 >
 ```bash
-$ git push origin master
+$ git push <repositorio_remoto> <nombre_rama>
 ```   
 >  Siendo master la rama en la cual queremos enviar los cambios.
     
@@ -81,13 +81,13 @@ $ git push origin master
 >  Actualizar el repositorio local al commit más nuevo para bajar y fusionar los cambios remotos.
 >
 ```bash
-$ git pull origin master
+$ git pull <repositorio_remoto> <nombre_rama>
 ```
      
 >   Para fusionar otra rama a tu rama activa (master en este caso):
 >   
 ```bash
-$ git merge <branch>
+$ git merge <nombre_rama>
 ```
 
 
