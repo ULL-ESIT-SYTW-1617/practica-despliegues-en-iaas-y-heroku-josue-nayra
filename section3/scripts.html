@@ -352,15 +352,24 @@
 <div class="callout callout-primary"><h4 id="generate-gitbook"> Generate-gitbook</h4><div><pre><code class="lang-undefined">#!/bin/sh
 CMDDESC=&quot;Generate GitBook&quot;
 ./node_modules/.bin/gitbook build ./txt ./gh-pages
-</code></pre><h4 id="primary-generate-wiki">primary:: Generate-wiki</h4><pre><code class="lang-undefined">#!/bin/sh
+</code></pre></div></div>
+<hr>
+
+<div class="callout callout-primary"><h4 id="generate-wiki"> Generate-wiki</h4><div><pre><code class="lang-undefined">#!/bin/sh
 CMDDESC=&quot;Generate Wiki&quot;
 node &quot;$(dirname $0)/generate-wiki.js&quot;
-</code></pre><h4 id="primary-deploy-gitbook">primary:: Deploy-gitbook</h4><p>Lee el fichero <em>&quot;package.json&quot;</em> y obtiene la URL del repositorio remoto.
+</code></pre></div></div>
+<hr>
+
+<div class="callout callout-primary"><h4 id="deploy-gitbook"> Deploy-gitbook</h4><div><p>Lee el fichero <em>&quot;package.json&quot;</em> y obtiene la URL del repositorio remoto.
 A continuaci&#xF3;n se realiza el despliegue en la rama gh-pages.</p><pre><code class="lang-undefined">#!/bin/sh
 CMDDESC=&quot;Deploy GitBook on Github&quot;
 REPO=$(node -e &quot;console.log(require(&apos;./package.json&apos;).repository.url);&quot;)
 node -e &quot;require(&apos;gh-pages&apos;).publish(&apos;./gh-pages&apos;, { repo: &apos;$REPO&apos;, logger: function(m) { console.error(m); } });&quot;
-</code></pre><h4 id="primary-deploy-wiki">primary:: Deploy-wiki</h4><pre><code class="lang-undefined">#!/bin/bash
+</code></pre></div></div>
+<hr>
+
+<div class="callout callout-primary"><h4 id="deploy-wiki"> Deploy-wiki</h4><div><pre><code class="lang-undefined">#!/bin/bash
 # source: https://raw.githubusercontent.com/christianalfoni/react-webpack-cookbook/master/scripts/deploy-wiki.sh
 # this script expects that a gh-pages build exists already
 # adapted from https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
@@ -425,7 +434,7 @@ git push --force origin master:master
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scripts","level":"1.4.2","depth":2,"next":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"previous":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/scripts.md","mtime":"2016-09-29T16:40:40.503Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T16:48:37.168Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scripts","level":"1.4.2","depth":2,"next":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"previous":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/scripts.md","mtime":"2016-09-29T16:51:13.371Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T16:53:52.627Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
