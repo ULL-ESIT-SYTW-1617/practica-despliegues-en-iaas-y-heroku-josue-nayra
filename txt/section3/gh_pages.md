@@ -5,7 +5,7 @@ GitHub Pages es un servicio de alojamiento gratuito que ofrece GitHub.
 Se permite alojar páginas web estáticas.
 
 
->- #### success::Pasos a seguir mediante la rama gh-pages
+>- #### primary::Pasos a seguir mediante la rama gh-pages
 
 > **1- Crear una nueva rama denominada "gh-pages"**
 
@@ -16,7 +16,7 @@ Se permite alojar páginas web estáticas.
 
 <hr />
 
->- #### success::Pasos a seguir para una web de usuario o de una Organización
+>- #### primary::Pasos a seguir para una web de usuario o de una Organización
 
 > **1- Crear un repositorio.**
 
@@ -37,7 +37,9 @@ Se permite alojar páginas web estáticas.
 
 <hr />
 
->- #### success::Video y tutorial explicativo sobre el uso de las gh-pages. {% youtube %} https://www.youtube.com/watch?v=iyFjdmzcpws {% endyoutube %}
+>- #### primary::Video y tutorial explicativo sobre el uso de las gh-pages. 
+
+> {% youtube %} https://www.youtube.com/watch?v=iyFjdmzcpws {% endyoutube %}
 
 
 

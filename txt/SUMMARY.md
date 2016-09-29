@@ -3,8 +3,6 @@
 Este es el indice de nuestro gitbook.
 
 * [Nodejs](section1/nodejs.md)
-    * [Comando npm](section1/npm.md)
-    * [Expressjs](section1/expressjs.md)
     * [Fichero package.json](section1/packagejson.md)
 * [Git](section2/git.md)
 * [Gitbook](section3/gitbook.md)
