@@ -96,5 +96,6 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 
 <hr />
 
->- #### primary::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
+>- #### primary::Videotutorial explicativo sobre el uso de Gulp.js (instalación, plugins,...)
+
 > {% youtube %}https://www.youtube.com/watch?v=CmNjijfiCrU{% endyoutube %}
