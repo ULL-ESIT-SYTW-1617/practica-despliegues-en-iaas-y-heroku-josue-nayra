@@ -21,16 +21,16 @@ $ npm init
 > Los campos que se incluirán en el archivo son los siguientes:
 
 
-> - **name:** Por defecto a menos que el nombre del autor en un gitdirectorio, en cuyo caso será el nombre del repositorio
+> - **name:** Por defecto a menos que el nombre del autor es un directorio git, en cuyo caso será el nombre del repositorio.
 > - **version:** siempre 1.0.0
 > - **main:** siempre el index.js
 > - **scripts:** Por defecto se crea vacío, pueden incluirse scripts que pueden ejecutarse con el comando npm.
 > - **keywords:** Palabras claves.
 > - **author:** Lo que nos ha facilitado la CLI
 > - **license:** ISC
-> - **repository:** Se tire en la información del directorio actual, si está presente
-> - **bugs:** Se tire en la información del directorio actual, si está presente
-> - **homepage:** Se tire en la información del directorio actual, si está presente
+> - **repository:** Información del repositorio actual
+> - **bugs:** Informes de errores de posibles mejoras (issues).
+> - **homepage:** Información del repositorio actual
 
 <hr />
 

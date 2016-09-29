@@ -1,7 +1,36 @@
-# GitBook Boilerplate 
+# Práctica 1. Sistemas y Tecnologías Web
 
-# comentario
-# Installation
+## Tareas Iniciales. JavaScript. NodeJS. Gulpfile. Gitbook
+
+
+### Integrantes
+
+> Josué Toledo Castro   
+>[Github](https://github.com/JosueTC94)
+
+> María Nayra Rodríguez Pérez   
+>[Github](https://github.com/alu0100406122)
+
+
+
+### Requisitos
+
+> 1.- Deberá de desplegar su libro en gh-pages
+
+> 2.- Deberá de desplegar su libro en GitBook
+
+> 3.- Añada un Gulpfile con tareas que automaticen la construcción y despliegue del libro en los diferentes sites
+
+> 4.- Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
+
+> 5.- Use algun GitBook Plugin en sus apuntes 
+
+
+
+### GitBook Boilerplate 
+
+
+#### Installation
 
 ```shell
 cd ~/code

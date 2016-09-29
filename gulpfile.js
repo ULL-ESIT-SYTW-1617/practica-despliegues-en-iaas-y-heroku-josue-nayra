@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
-var gh_pages = require('gh-pages');
 var watch = require('gulp-watch');
 
 gulp.task('construir_gitbook', function()
@@ -19,6 +18,14 @@ gulp.task('construir_gitbook', function()
             "./scripts/losh deploy-wiki"    
         ]))
 });
+
+
+// gulp.task('gitbook-pdf', function(){
+//     return gulp.src('')
+//         .pipe(shell(["gitbook pdf ../tareas-iniciales-josue-nayra ./mybook.pdf"])
+//         )
+// });
+
 
 gulp.task('default', function(){
     gulp.watch(['scripts/*', 'txt/**/*.md', 'book.json'], ['construir_gitbook']); 

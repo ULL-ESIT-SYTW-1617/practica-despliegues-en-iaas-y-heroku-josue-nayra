@@ -40,11 +40,8 @@
     "gulp-watch": "^4.3.10"
   },
   "dependencies": {
-    "gitbook-plugin-ace": "^0.3.2",
     "gitbook-plugin-bootstrap-callout": "^0.1.1",
-    "gitbook-plugin-copy-code-button": "0.0.2",
     "gitbook-plugin-exercises": "^2.1.1",
-    "gitbook-plugin-toc": "0.0.1",
     "gitbook-plugin-youtube": "^1.1.0"
   }
 }
