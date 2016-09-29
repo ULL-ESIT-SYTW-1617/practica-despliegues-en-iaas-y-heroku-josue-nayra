@@ -13,17 +13,16 @@ Además, es de Open Source, de modo que su código fuente es accesible desde git
 >-Eficiente: Construcciones más rápidas, sin necesidad de escribir archivos intermedios en el disco.
 En definitiva, comparandolo con [Grunt.js](http://gruntjs.com/), realizará las mismas operaciones pero en menos tiempo y
 sin necesidad de escribir en disco.
-Comparativa de Grunt.js y Gulp.js en el manejo de archivos, respectivamente:
+>- Alta calidad: Política de desarrollo basada en plugins simples de fácil uso para el usuario.
+>- Fácil de aprender: Posibilidad de acces a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
+de nuestra app sea más sencilla.
+  
+  
 > Grunt.s 
 >      ![Imagen](../images/funcinamiento_grunt.png)
 
 > Gulp.js 
 >      ![Imagen](../images/funcionamiento_gulp.png)
-
->- Alta calidad: Política de desarrollo basada en plugins simples de fácil uso para el usuario.
-
->- Fácil de aprender: Posibilidad de acces a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
-de nuestra app sea más sencilla.
 
 
 <hr />
@@ -81,3 +80,4 @@ $ gulp "nombre_tarea"
 >- #### primary::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
 
 > {% youtube %}https://www.youtube.com/watch?v=wNlEK8qrb0M&index=1&list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos{% endyoutube %}
+

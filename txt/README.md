@@ -27,7 +27,7 @@
 >- Aprenda a usar los GitBook Plugins
  
 
--------------
+-------------   
 
 >- #### primary:: Requisitos:
 

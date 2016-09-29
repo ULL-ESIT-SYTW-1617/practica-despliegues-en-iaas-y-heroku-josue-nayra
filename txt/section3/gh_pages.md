@@ -37,6 +37,6 @@ Se permite alojar páginas web estáticas.
 
 <hr />
 
->- #### primary::Video y tutorial explicativo sobre el uso de las gh-pages
+>- #### primary::Video y tutorial explicativo sobre el uso de las gh-pages. 
 
 > {% youtube %}https://www.youtube.com/watch?v=iyFjdmzcpws{% endyoutube %}
