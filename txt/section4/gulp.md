@@ -10,15 +10,15 @@ Además, es de Open Source, de modo que su código fuente es accesible desde git
 
 >- #### primary::Ventajas
 
-> -Fácil de usar:  Tareas complejas que se convierten en otras más manejables. 
+> Fácil de usar:  Tareas complejas que se convierten en otras más manejables. 
 
-> -Eficiente: Construcciones más rápidas, sin necesidad de escribir archivos intermedios en el disco.
+> Eficiente: Construcciones más rápidas, sin necesidad de escribir archivos intermedios en el disco.
 En definitiva, comparandolo con [Grunt.js](http://gruntjs.com/), realizará las mismas operaciones pero en menos tiempo y
 sin necesidad de escribir en disco.
 
->- Alta calidad: Política de desarrollo basada en plugins simples de fácil uso para el usuario.
+> Alta calidad: Política de desarrollo basada en plugins simples de fácil uso para el usuario.
 
->- Fácil de aprender: Posibilidad de acces a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
+> Fácil de aprender: Posibilidad de acces a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
 de nuestra app sea más sencilla.
   
 <hr />
@@ -26,11 +26,9 @@ de nuestra app sea más sencilla.
 >- #### primary::Gulpjs vs Gruntjs
 
 > Grunt.s
-
->      ![](../images/funcinamiento_grunt.png)
+>      ![Imagen](../images/funcionamiento_grunt.png)
 
 > Gulp.js 
-
 >      ![Imagen](../images/funcionamiento_gulp.png)
 
 
@@ -40,17 +38,17 @@ de nuestra app sea más sencilla.
 
 > 1.- Instalación de Gulp.js
 >
-```html
+```bash
         $ npm install gulp --save-dev
 ```
-![Image](../images/instalando_gulp.png)
+![Imagen](../images/instalando_gulp.png)
 
 > *Nota:*
 
 >   Podemos verificar que gulp se ha instalado 
 >  correctamente ejecutando el siguiente comando:
 >
-```
+```bash
 $ gulp -v
 ```
 

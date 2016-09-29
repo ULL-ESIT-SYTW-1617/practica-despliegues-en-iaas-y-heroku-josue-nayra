@@ -11,7 +11,7 @@ para saber que tareas realizará y ejecutará.
 > Cualquier plugin que haya sido instalado y que sea necesario para ejecutar una tarea 
 > determinada se incluirá en el inicio del gulpfile como dependencia:
 > 
-```
+```js
 var gulp = require('gulp');
 var "nombre_asignado_plugin" = require("nombre_plugin_instalado");
 ```
@@ -23,7 +23,7 @@ var "nombre_asignado_plugin" = require("nombre_plugin_instalado");
 > y como segundo la función a ejecutar cuando se invoque:
 
 > 
-```
+```js
 gulp.task("nombre_tarea",function(){
 });
 ```
@@ -33,12 +33,12 @@ gulp.task("nombre_tarea",function(){
 > Representa aquella tarea que puede ser invocada desde línea de comandos
 > simplemente introduciendo "gulp", sin llamar a ningún task en particular:
 >
-```
+```bash
     $ gulp
 ```
 
 > Definición y sintaxis:
-```
+```js
 gulp.task('default', function()
 {
 });
@@ -46,7 +46,7 @@ gulp.task('default', function()
 > Podemos configurar la *Default task* a modo de que ejecute automáticamente
 algunas subtareas configuradas en el gulpfile.js:
 > 
-```
+```js
     gulp.task('default', ['subtarea']);
 ```
 
@@ -54,7 +54,7 @@ algunas subtareas configuradas en el gulpfile.js:
 
 >- #### primary::Ejemplo:
 >
-```
+```js
 var gulp = require('gulp');
 var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
