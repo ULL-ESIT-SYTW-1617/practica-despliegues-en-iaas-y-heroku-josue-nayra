@@ -12,3 +12,7 @@ GitBook ayuda a estructurar el flujo de trabajo, asegurando el control de acceso
 
 Esta herramienta permite ampliar su contenido con pluggins desarrollados por la comunidad.
 
+
+
+
+![Imagen](../images/gitbook.png)
