@@ -1,19 +1,19 @@
 # Práctica 1. Sistemas y Tecnologías Web
 
-### Tareas Iniciales. JavaScript. NodeJS. Gulpfile. Gitbook
+>- #### primary:: Tareas Iniciales. JavaScript. NodeJS. Gulpfile. Gitbook
 
 
-- Instale NodeJS
+>- Instale NodeJS
    - Comprueba que npm funciona
    - Instala expressjs
 
-- Instala Git. Si estás en Windows sigue las instrucciones en
+>- Instala Git. Si estás en Windows sigue las instrucciones en
    [https://git-for-windows.github.io/](https://git-for-windows.github.io/)
    [https://desktop.github.com/](https://desktop.github.com/)
 
-- Instalar gitbook en tu ordenador (o bien usa c9)
+>- Instalar gitbook en tu ordenador (o bien usa c9)
 
-- Aprenda a utilizar GitBook escribiendo la documentación en formato MarkDown de como ha realizado esta primera práctica, incluyendo secciones:
+>- Aprenda a utilizar GitBook escribiendo la documentación en formato MarkDown de como ha realizado esta primera práctica, incluyendo secciones:
    - Qué es GitBook y como se utiliza
    - Qué son las gh-pages y como se utilizan
    - Módulo gh-pages para automatizar el despliegue en gh-pages 
@@ -24,15 +24,15 @@
    - Gulpfile
 
 
-- Aprenda a usar los GitBook Plugins
+>- Aprenda a usar los GitBook Plugins
  
 
 -------------   
 
-#### Requisitos:
+>- #### primary:: Requisitos:
 
-- Deberá de desplegar su libro en gh-pages
-- Deberá de desplegar su libro en GitBook
-- Añada un Gulpfile con tareas que automaticen la construcción y despliegue del libro en los diferentes sites
-- Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
-- Use algun GitBook Plugin en sus apuntes
+>- Deberá de desplegar su libro en gh-pages
+>- Deberá de desplegar su libro en GitBook
+>- Añada un Gulpfile con tareas que automaticen la construcción y despliegue del libro en los diferentes sites
+>- Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
+>- Use algun GitBook Plugin en sus apuntes

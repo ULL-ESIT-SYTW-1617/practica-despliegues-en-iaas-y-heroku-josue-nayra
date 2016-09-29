@@ -4,7 +4,7 @@ Gulpfile es el archivo o fichero de configuración que Gulp necesita
 para saber que tareas realizará y ejecutará.
 
 
->- #### danger::Estructura del fichero
+>- #### primary::Estructura del fichero
 > **Plugins**
 >   Cualquier plugin que haya sido instalado y que sea necesario para ejecutar una tarea 
 >   determinada se incluirá en el inicio del gulpfile como dependencia:
@@ -47,7 +47,7 @@ algunas subtareas configuradas en el gulpfile.js:
 
 <hr />
 
->- #### danger::Ejemplos:
+>- #### primary::Ejemplos:
 >
 ```
 var gulp = require('gulp');
@@ -96,5 +96,5 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 
 <hr />
 
->- #### danger::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
-> {% youtube %} https://www.youtube.com/watch?v=CmNjijfiCrU {% endyoutube %}
+>- #### primary::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
+> {% youtube %}https://www.youtube.com/watch?v=CmNjijfiCrU{% endyoutube %}

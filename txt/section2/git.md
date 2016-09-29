@@ -6,7 +6,7 @@ Es un software de control de versiones diseñado por Linus Torvalds, pensando en
 Git es fácil de aprender con un rendimiento muy rápido, permitiendo múltiples flujos de trabajo en un mismo proyecto.
 
 
->- #### pimary::Descarga e instalación
+>- #### primary::Descarga e instalación
 
 > Windows  
 
@@ -73,7 +73,9 @@ git init
    ```   
 >  Siendo master la rama en la cual queremos enviar los cambios.
     
- 
+   
+   
+    
 > **Actualizar y fusionar los cambios**
     
 >  Actualizar el repositorio local al commit más nuevo para bajar y fusionar los cambios remotos.

@@ -9,12 +9,12 @@
 sudo apt-get install nodejs
 ```
 
-> #### primary::  Npm
+>- #### primary::  Npm
 
 > Es el gestor de paquetes para JavaScript. Buscar, compartir y reutilizar los paquetes de código de distintos desarrolladores.
  
 
-
+<hr />
 >- #### primary:: ExpressJS
 >Es un framework de desarrollo de aplicaciones web minimalista y flexible para Node.js
 >Es robusto, rápido, flexible y muy simple.
