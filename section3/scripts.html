@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Comando npm · Gitbook para apuntes. Asignatura SYTW16-17</title>
+        <title>Scripts · Gitbook para apuntes. Asignatura SYTW16-17</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="expressjs.html" />
+    <link rel="next" href="gh_pages.html" />
     
     
-    <link rel="prev" href="nodejs.html" />
+    <link rel="prev" href="libro_gitbook.html" />
     
 
     </head>
@@ -110,9 +110,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="nodejs.html">
+        <li class="chapter " data-level="1.2" data-path="../section1/nodejs.html">
             
-                <a href="nodejs.html">
+                <a href="../section1/nodejs.html">
             
                     
                     Nodejs
@@ -124,9 +124,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="npm.html">
+        <li class="chapter " data-level="1.2.1" data-path="../section1/npm.html">
             
-                <a href="npm.html">
+                <a href="../section1/npm.html">
             
                     
                     Comando npm
@@ -137,9 +137,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="expressjs.html">
+        <li class="chapter " data-level="1.2.2" data-path="../section1/expressjs.html">
             
-                <a href="expressjs.html">
+                <a href="../section1/expressjs.html">
             
                     
                     Expressjs
@@ -150,9 +150,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="packagejson.html">
+        <li class="chapter " data-level="1.2.3" data-path="../section1/packagejson.html">
             
-                <a href="packagejson.html">
+                <a href="../section1/packagejson.html">
             
                     
                     Fichero package.json
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../section3/gitbook.html">
+        <li class="chapter " data-level="1.4" data-path="gitbook.html">
             
-                <a href="../section3/gitbook.html">
+                <a href="gitbook.html">
             
                     
                     Gitbook
@@ -195,9 +195,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../section3/libro_gitbook.html">
+        <li class="chapter " data-level="1.4.1" data-path="libro_gitbook.html">
             
-                <a href="../section3/libro_gitbook.html">
+                <a href="libro_gitbook.html">
             
                     
                     Desplegando un libro en gitbook
@@ -208,9 +208,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../section3/scripts.html">
+        <li class="chapter active" data-level="1.4.2" data-path="scripts.html">
             
-                <a href="../section3/scripts.html">
+                <a href="scripts.html">
             
                     
                     Scripts
@@ -221,9 +221,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../section3/gh_pages.html">
+        <li class="chapter " data-level="1.4.3" data-path="gh_pages.html">
             
-                <a href="../section3/gh_pages.html">
+                <a href="gh_pages.html">
             
                     
                     ¿Qué son las gh-pages y cómo se utilizan?
@@ -359,7 +359,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Comando npm</a>
+        <a href=".." >Scripts</a>
     </h1>
 </div>
 
@@ -374,8 +374,59 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="npm">Npm</h4>
-<p>Es el gestor de paquetes para JavaScript. Buscar, compartir y reutilizar los paquetes de c&#xF3;digo de distintos desarrolladores.</p>
+                                <h2 id="scripts">Scripts</h2>
+<h4 id="generate-gitbook">Generate-gitbook</h4>
+<pre><code class="lang-undefined">#!/bin/sh
+
+CMDDESC=&quot;Generate GitBook&quot;
+
+./node_modules/.bin/gitbook build ./txt ./gh-pages
+</code></pre>
+<h4 id="generate-wiki">Generate-wiki</h4>
+<pre><code class="lang-undefined">#!/bin/sh
+
+CMDDESC=&quot;Generate Wiki&quot;
+
+node &quot;$(dirname $0)/generate-wiki.js&quot;
+</code></pre>
+<h4 id="deploy-gitbook">Deploy-gitbook</h4>
+<p>Lee el fichero <em>&quot;package.json&quot;</em> y obtiene la URL del repositorio remoto.
+A continuaci&#xF3;n se realiza el despliegue en la rama gh-pages.</p>
+<pre><code class="lang-undefined">#!/bin/sh
+
+CMDDESC=&quot;Deploy GitBook on Github&quot;
+
+REPO=$(node -e &quot;console.log(require(&apos;./package.json&apos;).repository.url);&quot;)
+
+node -e &quot;require(&apos;gh-pages&apos;).publish(&apos;./gh-pages&apos;, { repo: &apos;$REPO&apos;, logger: function(m) { console.error(m); } });&quot;
+</code></pre>
+<h4 id="deploy-wiki">Deploy-wiki</h4>
+<pre><code class="lang-undefined">#!/bin/bash
+# source: https://raw.githubusercontent.com/christianalfoni/react-webpack-cookbook/master/scripts/deploy-wiki.sh
+# this script expects that a gh-pages build exists already
+# adapted from https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
+# go to the out directory and create a *new* Git repo
+
+CMDDESC=&quot;Deploy wiki on Github&quot;
+
+REPO=$(node -e &quot;console.log(require(&apos;./package.json&apos;).repository.wiki);&quot;)
+
+
+cd wiki
+# Remove possible existing git repo. We&apos;ll replace entire wiki
+rm -rf .git
+# Init new repo
+git init
+# The first and only commit to this new Git repo contains all the
+# files present with the commit message &quot;Deploy to GitHub Pages&quot;.
+git add .
+git commit -m &quot;Deploy to Wiki&quot;
+# Add origin
+git remote add origin $REPO
+# Force push from the current repo&apos;s master branch to the remote
+# (All previous history on the master branch will be lost, since we are overwriting it.)
+git push --force origin master:master
+</code></pre>
 
                                 
                                 </section>
@@ -403,12 +454,12 @@
 
             
                 
-                <a href="nodejs.html" class="navigation navigation-prev " aria-label="Previous page: Nodejs">
+                <a href="libro_gitbook.html" class="navigation navigation-prev " aria-label="Previous page: Desplegando un libro en gitbook">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="expressjs.html" class="navigation navigation-next " aria-label="Next page: Expressjs">
+                <a href="gh_pages.html" class="navigation navigation-next " aria-label="Next page: ¿Qué son las gh-pages y cómo se utilizan?">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -419,7 +470,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Comando npm","level":"1.2.1","depth":2,"next":{"title":"Expressjs","level":"1.2.2","depth":2,"path":"section1/expressjs.md","ref":"section1/expressjs.md","articles":[]},"previous":{"title":"Nodejs","level":"1.2","depth":1,"path":"section1/nodejs.md","ref":"section1/nodejs.md","articles":[{"title":"Comando npm","level":"1.2.1","depth":2,"path":"section1/npm.md","ref":"section1/npm.md","articles":[]},{"title":"Expressjs","level":"1.2.2","depth":2,"path":"section1/expressjs.md","ref":"section1/expressjs.md","articles":[]},{"title":"Fichero package.json","level":"1.2.3","depth":2,"path":"section1/packagejson.md","ref":"section1/packagejson.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section1/npm.md","mtime":"2016-09-28T17:03:26.160Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T09:14:57.386Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scripts","level":"1.4.2","depth":2,"next":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"previous":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/scripts.md","mtime":"2016-09-29T09:11:27.481Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T09:14:57.386Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
