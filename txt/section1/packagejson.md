@@ -9,7 +9,7 @@ Archivo para gestionar los paquetes npm instalados localmente.
 > - Manera más fácil para compartir con otros desarrolladores.
 
 
->- #### success::Creación de un **package.json**
+>- #### primary::Creación de un **package.json**
 
 > Crear el archivo package.json mediante un cuestionario desde línea de comandos que concluirá con la creación del archivo en el directorio en el cual se haya iniciado el comando.
 
@@ -31,7 +31,7 @@ Archivo para gestionar los paquetes npm instalados localmente.
 
 <hr />
 
->- #### success::Especificación de paquetes 
+>- #### primary::Especificación de paquetes 
 
 > Es necesario listar los paquetes que se desean utilizar en el proyecto en el archivo.
 > Hay dos tipos de paquetes que se pueden listar:
@@ -41,7 +41,7 @@ Archivo para gestionar los paquetes npm instalados localmente.
 
 <hr />
 
->- #### success::Ejemplo de archivo "package.json"
+>- #### primary::Ejemplo de archivo "package.json"
 >
 ```
 {

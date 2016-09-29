@@ -6,7 +6,7 @@ Es un software de control de versiones diseñado por Linus Torvalds, pensando en
 Git es fácil de aprender con un rendimiento muy rápido, permitiendo múltiples flujos de trabajo en un mismo proyecto.
 
 
->- #### danger::Descarga e instalación
+>- #### pimary::Descarga e instalación
 
 > Windows  
 
@@ -22,7 +22,7 @@ Git es fácil de aprender con un rendimiento muy rápido, permitiendo múltiples
 
 <hr />
   
->- #### danger::Flujo de trabajo
+>- #### primary::Flujo de trabajo
 
 > El repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu Directorio de trabajo que contiene los archivos, el segundo es el Index que actua como una zona intermedia, y el último es el HEAD que apunta al último commit realizado. 
 
@@ -30,7 +30,7 @@ Git es fácil de aprender con un rendimiento muy rápido, permitiendo múltiples
 
 <hr />
 
->- #### danger::Comandos más importantes
+>- #### primary::Comandos más importantes
 
 > **Crear un nuevo repositorio**
 > 

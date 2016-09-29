@@ -3,7 +3,7 @@ Plugin Bootstrap!
 
 Este plugin permite introducir ventanas o llamadas que resaltan bloques de contenido siguiendo tres tonalidades(negro, sepia, noche).
 
->- #### warning::¿Cómo podemos instalar este plugin?
+>- #### primary::¿Cómo podemos instalar este plugin?
 
 > - Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
 >
