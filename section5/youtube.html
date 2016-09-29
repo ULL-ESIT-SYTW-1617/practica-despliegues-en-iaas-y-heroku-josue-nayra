@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Youtube · GitBook</title>
+        <title>Youtube · Gitbook para apuntes. Asignatura SYTW16-17</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.1.1">
         
         
         
@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
@@ -366,29 +374,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <blockquote><ul><li><h4 id="primaryplugin-youtube">primary::Plugin Youtube!</h4></li></ul>
-<p>Este plugin permite introducir contenidos del sitio web <a href="http://www.youtube.com" target="_blank">Youtube</a>, como por ejemplo, videos.</p><p>&#xBF;C&#xF3;mo podemos instalar este plugin?</p><ul><li>Debemos instalar el siguiente paquete  y a&#xF1;adirlo a nuestro package.json: 
-</li></ul>
-<pre><code>$ npm install gitbook-plugin-youtube --save-dev</code></pre>
-<ul><li>Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
-</li></ul>
-<pre><code>{
+                                <div class="callout callout-primary"><h4 id="plugin-youtube">Plugin Youtube!</h4><div><p>Este plugin permite introducir contenidos del sitio web <a href="http://www.youtube.com" target="_blank">Youtube</a>, como por ejemplo, videos.</p><p>&#xBF;C&#xF3;mo podemos instalar este plugin?</p><ul>
+<li>Debemos instalar el siguiente paquete  y a&#xF1;adirlo a nuestro package.json:</li>
+</ul><pre><code class="lang-undefined">$ npm install gitbook-plugin-youtube --save-dev
+</code></pre><ul>
+<li>Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json</li>
+</ul><pre><code class="lang-undefined">{
     &quot;plugins&quot;: [&quot;youtube&quot;]
-}</code></pre>
-<ul><li>Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
-</li></ul>
-<pre><code>$ gitbook install</code></pre>
-<ul><li><h3 id="primary&#xBF;c&#xF3;mo-podemos-usar-este-plugin">primary::&#xBF;C&#xF3;mo podemos usar este plugin?</h3></li>
-<li><p>Definici&#xF3;n y sintaxis</p></li></ul>
-<pre><code>{ % youtube % }
+}
+</code></pre><ul>
+<li>Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:</li>
+</ul><pre><code class="lang-undefined">$ gitbook install
+</code></pre><ul>
+<li><h3 id="primary&#xBF;c&#xF3;mo-podemos-usar-este-plugin">primary::&#xBF;C&#xF3;mo podemos usar este plugin?</h3>
+</li>
+<li>Definici&#xF3;n y sintaxis</li>
+</ul><pre><code class="lang-undefined">{ % youtube % }
 &quot;Enlace de Youtube&quot;
-{ % endyoutube % }</code></pre>
-<h2 id="ejemplo">Ejemplo</h2><ul><li>Codigo del plugin
-</li></ul>
-<pre><code>{% youtube %}https://www.youtube.com/watch?v=kdpfRLpu0FQ{% endyoutube %}</code></pre>
-<ul><li>Video
-</li></ul>
-<p>{ % youtube % }<a href="http://www.youtube.com/watch?v=kdpfRLpu0FQ{" target="_blank">http://www.youtube.com/watch?v=kdpfRLpu0FQ{</a> % endyoutube % }</p></blockquote>
+{ % endyoutube % }
+</code></pre><h2 id="ejemplo">Ejemplo</h2><ul>
+<li>Codigo del plugin</li>
+</ul><pre><code class="lang-undefined">
+</code></pre><ul>
+<li>Video</li>
+</ul><p>{ % youtube % }<a href="http://www.youtube.com/watch?v=kdpfRLpu0FQ{" target="_blank">http://www.youtube.com/watch?v=kdpfRLpu0FQ{</a> % endyoutube % }</p></div></div>
+
                                 
                                 </section>
                             
@@ -431,14 +441,32 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Youtube","level":"1.6.2","depth":2,"next":{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]},"previous":{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section5/youtube.md","mtime":"2016-09-28T19:58:27.368Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T12:47:14.481Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Youtube","level":"1.6.2","depth":2,"next":{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]},"previous":{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section5/youtube.md","mtime":"2016-09-28T19:58:27.368Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T12:56:32.014Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -464,6 +492,7 @@
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
 
     </body>
 </html>

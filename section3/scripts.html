@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Scripts · GitBook</title>
+        <title>Scripts · Gitbook para apuntes. Asignatura SYTW16-17</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.1.1">
         
         
         
@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
@@ -366,26 +374,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="scripts">Scripts</h2><h4 id="generate-gitbook">Generate-gitbook</h4><pre><code>
-#!/bin/sh
+                                <h2 id="scripts">Scripts</h2>
+<h4 id="generate-gitbook">Generate-gitbook</h4>
+<pre><code class="lang-undefined">#!/bin/sh
 
 CMDDESC=&quot;Generate GitBook&quot;
 
-./node_modules/.bin/gitbook build ./txt ./gh-pages</code></pre>
-<h4 id="generate-wiki">Generate-wiki</h4><pre><code>#!/bin/sh
+./node_modules/.bin/gitbook build ./txt ./gh-pages
+</code></pre>
+<h4 id="generate-wiki">Generate-wiki</h4>
+<pre><code class="lang-undefined">#!/bin/sh
 
 CMDDESC=&quot;Generate Wiki&quot;
 
-node &quot;$(dirname $0)/generate-wiki.js&quot;</code></pre>
-<h4 id="deploy-gitbook">Deploy-gitbook</h4><p>Lee el fichero <em>&quot;package.json&quot;</em> y obtiene la URL del repositorio remoto.
-A continuaci&#xF3;n se realiza el despliegue en la rama gh-pages.</p><pre><code>#!/bin/sh
+node &quot;$(dirname $0)/generate-wiki.js&quot;
+</code></pre>
+<h4 id="deploy-gitbook">Deploy-gitbook</h4>
+<p>Lee el fichero <em>&quot;package.json&quot;</em> y obtiene la URL del repositorio remoto.
+A continuaci&#xF3;n se realiza el despliegue en la rama gh-pages.</p>
+<pre><code class="lang-undefined">#!/bin/sh
 
 CMDDESC=&quot;Deploy GitBook on Github&quot;
 
 REPO=$(node -e &quot;console.log(require(&apos;./package.json&apos;).repository.url);&quot;)
 
-node -e &quot;require(&apos;gh-pages&apos;).publish(&apos;./gh-pages&apos;, { repo: &apos;$REPO&apos;, logger: function(m) { console.error(m); } });&quot;</code></pre>
-<h4 id="deploy-wiki">Deploy-wiki</h4><pre><code>#!/bin/bash
+node -e &quot;require(&apos;gh-pages&apos;).publish(&apos;./gh-pages&apos;, { repo: &apos;$REPO&apos;, logger: function(m) { console.error(m); } });&quot;
+</code></pre>
+<h4 id="deploy-wiki">Deploy-wiki</h4>
+<pre><code class="lang-undefined">#!/bin/bash
 # source: https://raw.githubusercontent.com/christianalfoni/react-webpack-cookbook/master/scripts/deploy-wiki.sh
 # this script expects that a gh-pages build exists already
 # adapted from https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
@@ -409,7 +425,8 @@ git commit -m &quot;Deploy to Wiki&quot;
 git remote add origin $REPO
 # Force push from the current repo&apos;s master branch to the remote
 # (All previous history on the master branch will be lost, since we are overwriting it.)
-git push --force origin master:master</code></pre>
+git push --force origin master:master
+</code></pre>
 
                                 
                                 </section>
@@ -453,14 +470,32 @@ git push --force origin master:master</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scripts","level":"1.4.2","depth":2,"next":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"previous":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section3/scripts.md","mtime":"2016-09-29T12:17:41.665Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T12:47:14.481Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scripts","level":"1.4.2","depth":2,"next":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"previous":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/scripts.md","mtime":"2016-09-29T12:17:41.665Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T12:56:32.014Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -486,6 +521,7 @@ git push --force origin master:master</code></pre>
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
 
     </body>
 </html>
