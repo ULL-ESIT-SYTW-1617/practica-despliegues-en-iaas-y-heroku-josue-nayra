@@ -16,7 +16,7 @@ Git es fácil de aprender con un rendimiento muy rápido, permitiendo múltiples
 
 > Linux
 >
-```
+```bash
   $ apt-get install git
 ```
 
@@ -34,43 +34,43 @@ Git es fácil de aprender con un rendimiento muy rápido, permitiendo múltiples
 
 > **Crear un nuevo repositorio**
 > 
-```
-git init
+```bash
+$ git init
 ```
 > **Clonar un repositorio existente**
 
 >   Crea una copia local del repositorio ejecutando...
->   
-   ```
-   git clone /path/to/repository
-   ```
+>
+```bash
+$ git clone /path/to/repository
+```
 >  Para un servidor remoto ejecutar...
 > 
-   ```
-   git clone username@host:/path/to/repository
-   ```
+```bash
+$ git clone username@host:/path/to/repository
+```
    
 > **Add y Commit**
     
 >   Registrar cambios añadiendolos al Index mediante el comando:
 >
-   ```
-   git add <filename>   o    git add .
-   ```
+```bash
+$ git add <filename>   o    git add .
+```
 >
    Incluir el archivo en el Head haciendo commit a los cambios (aún no en el repositorio):
 >
-   ```
-   git commit -m "Commit message"
-   ```
+```bash
+$ git commit -m "Commit message"
+```
  
 > **Añadir los cambios**
     
 >  Añadir los cambios al repositorio remoto:
 >
-   ```
-   git push origin master
-   ```   
+```bash
+$ git push origin master
+```   
 >  Siendo master la rama en la cual queremos enviar los cambios.
     
    
@@ -80,15 +80,15 @@ git init
     
 >  Actualizar el repositorio local al commit más nuevo para bajar y fusionar los cambios remotos.
 >
-   ```
-   git pull
-   ```
+```bash
+$ git pull
+```
      
 >   Para fusionar otra rama a tu rama activa (master en este caso):
 >   
-   ```
-   git merge <branch>
-   ```
+```bash
+$ git merge <branch>
+```
 
 
    

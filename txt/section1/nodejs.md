@@ -5,8 +5,8 @@
 **Es un entorno Javascript del lado del servidor, basado en eventos.**
 [http://www.netconsulting.es/blog/nodejs/](http://www.netconsulting.es/blog/nodejs/)
 
-```
-sudo apt-get install nodejs
+```bash
+$ sudo apt-get install nodejs
 ```
 
 >- #### primary::  Npm
@@ -21,7 +21,7 @@ sudo apt-get install nodejs
 
 > Para instalarlo previamente de debe tener instalado nodeJS y npm.
 >
-```
+```bash
 $ npm install -g expressjs
 ```
 >Con esto instalamos express de forma global.

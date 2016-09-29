@@ -13,7 +13,10 @@ Archivo para gestionar los paquetes npm instalados localmente.
 
 > Crear el archivo package.json mediante un cuestionario desde línea de comandos que concluirá con la creación del archivo en el directorio en el cual se haya iniciado el comando.
 
-> `init npm `
+> 
+```bash
+$ npm init 
+```
 
 > Los campos que se incluirán en el archivo son los siguientes:
 
@@ -43,7 +46,7 @@ Archivo para gestionar los paquetes npm instalados localmente.
 
 >- #### primary::Ejemplo de archivo "package.json"
 >
-```
+```json
 {
   "name": "gitbook-boilerplate",
   "version": "0.0.1",
