@@ -9,13 +9,13 @@ Archivo para gestionar los paquetes npm instalados localmente.
 > - Manera más fácil para compartir con otros desarrolladores.
 
 
-#### Creación de un **package.json**
+>- #### success::Creación de un **package.json**
 
-Crear el archivo package.json mediante un cuestionario desde línea de comandos que concluirá con la creación del archivo en el directorio en el cual se haya iniciado el comando.
+> Crear el archivo package.json mediante un cuestionario desde línea de comandos que concluirá con la creación del archivo en el directorio en el cual se haya iniciado el comando.
 
-`init npm `
+> `init npm `
 
-Los campos que se incluirán en el archivo son los siguientes:
+> Los campos que se incluirán en el archivo son los siguientes:
 
 
 > - **name:** Por defecto a menos que el nombre del autor en un gitdirectorio, en cuyo caso será el nombre del repositorio
@@ -29,18 +29,20 @@ Los campos que se incluirán en el archivo son los siguientes:
 > - **bugs:** Se tire en la información del directorio actual, si está presente
 > - **homepage:** Se tire en la información del directorio actual, si está presente
 
+<hr />
 
-#### Especificación de paquetes 
+>- #### success::Especificación de paquetes 
 
-Es necesario listar los paquetes que se desean utilizar en el proyecto en el archivo.
-Hay dos tipos de paquetes que se pueden listar:
+> Es necesario listar los paquetes que se desean utilizar en el proyecto en el archivo.
+> Hay dos tipos de paquetes que se pueden listar:
 
-- "dependencies": Paquetes necesarios para la ejecución de la aplicación.
-- "devDependencies": Paquetes necesarios para el desarrollo del proyecto y para las pruebas del mismo.
+> - "dependencies": Paquetes necesarios para la ejecución de la aplicación.
+> - "devDependencies": Paquetes necesarios para el desarrollo del proyecto y para las pruebas del mismo.
 
+<hr />
 
-#### Ejemplo de archivo "package.json"
-
+>- #### success::Ejemplo de archivo "package.json"
+>
 ```
 {
   "name": "gitbook-boilerplate",
@@ -81,5 +83,4 @@ Hay dos tipos de paquetes que se pueden listar:
     "gitbook": "^2.1.0"
   }
 }
-
 ```

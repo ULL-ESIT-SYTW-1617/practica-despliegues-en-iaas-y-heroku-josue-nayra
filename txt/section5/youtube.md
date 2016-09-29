@@ -1,8 +1,8 @@
->- #### primary::Plugin Youtube!
+Plugin Youtube!
+==============  
+Este plugin permite introducir contenidos del sitio web [Youtube](http://www.youtube.com), como por ejemplo, videos.
 
-> Este plugin permite introducir contenidos del sitio web [Youtube](http://www.youtube.com), como por ejemplo, videos.
-
-> ¿Cómo podemos instalar este plugin?
+>- #### danger::¿Cómo podemos instalar este plugin?
 
 > - Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
 >
@@ -22,7 +22,9 @@ $ npm install gitbook-plugin-youtube --save-dev
 $ gitbook install
 ```
 
->- ### primary::¿Cómo podemos usar este plugin?
+<hr />
+
+>- #### danger::¿Cómo podemos usar este plugin?
 
 > - Definición y sintaxis
 >
@@ -32,17 +34,20 @@ $ gitbook install
 { % endyoutube % }
 ```
 
+<hr />
 
-> Ejemplo
-> -------------
+>- #### danger::Ejemplo
 
 > - Codigo del plugin
 >
 ```
-{% youtube %}https://www.youtube.com/watch?v=kdpfRLpu0FQ{% endyoutube %}
+{ % youtube % }https://www.youtube.com/watch?v=kdpfRLpu0FQ{ % endyoutube % }
 ```
-> - Video
->
-{ % youtube % }http://www.youtube.com/watch?v=kdpfRLpu0FQ{ % endyoutube % }
+
+** Video ** 
+
+{% youtube %}
+http://www.youtube.com/watch?v=kdpfRLpu0FQ
+{% endyoutube %}
 
 

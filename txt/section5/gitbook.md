@@ -1,10 +1,11 @@
->- #### primary::Gitbook Plugins!
+Gitbook Plugins!
+===============
 
-> **Gitbook Plugins** representan una buena opción si queremos extender las funcionalidades de nuestro Gitbook.
-> Entre estas funcionalidades destacan: incorporar videos de Youtube, ejercicios, incorporar fórmulas matemáticas, campos para introducir comentarios, ...
-> Podemos encontrar los Gitbook plugins que nos interesen en [Plugins Gitbook](http://plugins.gitbook.com)
+**Gitbook Plugins** representan una buena opción si queremos extender las funcionalidades de nuestro Gitbook.
+Entre estas funcionalidades destacan: incorporar videos de Youtube, ejercicios, incorporar fórmulas matemáticas, campos para introducir comentarios, ...
+Podemos encontrar los Gitbook plugins que nos interesen en [Plugins Gitbook](http://plugins.gitbook.com)
 
-> ¿Cómo podemos instalar un plugin?
+>- #### primary::¿Cómo podemos instalar un plugin?
 
 > - Creamos fichero **book.json** siguiendo la estructura:
 >

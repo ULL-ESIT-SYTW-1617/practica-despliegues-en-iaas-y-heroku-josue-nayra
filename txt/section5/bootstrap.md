@@ -3,30 +3,27 @@ Plugin Bootstrap!
 
 Este plugin permite introducir ventanas o llamadas que resaltan bloques de contenido siguiendo tres tonalidades(negro, sepia, noche).
 
-¿Cómo podemos instalar este plugin?
--------------
+>- #### warning::¿Cómo podemos instalar este plugin?
 
-- Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
-
+> - Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
+>
 ```
 $ npm install gitbook-plugin-bootstrap-callout --save-dev
 ```
-
-- Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
-
+> - Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
+>
 ``` 
 {
     "plugins": ["bootstrap-callout"]
 }
 ```
-
-- Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
-
+> - Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
+>
 ```
-
 $ gitbook install
-
 ```
+
+<hr />
 
 ¿Cómo podemos usar este plugin?
 -------------
