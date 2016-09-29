@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Gulp · Gitbook para apuntes. Asignatura SYTW16-17</title>
+        <title>Gulp · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.1.1">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -15,14 +15,6 @@
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
-                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
@@ -68,7 +60,7 @@
     <link rel="next" href="gulpfile.html" />
     
     
-    <link rel="prev" href="../section3/libro_gitbook.html" />
+    <link rel="prev" href="../section3/gh_pages.html" />
     
 
     </head>
@@ -195,38 +187,38 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../section3/que_es_gitbook.html">
-            
-                <a href="../section3/que_es_gitbook.html">
-            
-                    
-                    ¿Qué es Gitbook y cómo se utiliza?
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="../section3/gh_pages.html">
-            
-                <a href="../section3/gh_pages.html">
-            
-                    
-                    ¿Qué son las gh-pages y cómo se utilizan?
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="../section3/libro_gitbook.html">
+        <li class="chapter " data-level="1.4.1" data-path="../section3/libro_gitbook.html">
             
                 <a href="../section3/libro_gitbook.html">
             
                     
                     Desplegando un libro en gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../section3/scripts.html">
+            
+                <a href="../section3/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../section3/gh_pages.html">
+            
+                <a href="../section3/gh_pages.html">
+            
+                    
+                    ¿Qué son las gh-pages y cómo se utilizan?
             
                 </a>
             
@@ -374,37 +366,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="gulpjs">Gulp.js</h2>
-<p>Herramienta que automatiza y mejora nuestro flujo de trabajo. Su funci&#xF3;n principal reside en la automatizaci&#xF3;n
-de tareas comunes de desarrollo, agilizando el tiempo por tanto el tiempo empleado por el desarrollador en realizar
-tareas comunes manualmente.</p>
-<p>Est&#xE1; construido con Javascript, funcionando sobre Node.js
-Adem&#xE1;s, es de Open Source, de modo que su c&#xF3;digo fuente es accesible desde github a partir de este <a href="https://github.com/gulpjs/gulp/" target="_blank">enlace</a>.</p>
-<div class="callout callout-danger"><h4 id="ventajas">Ventajas</h4><div></div></div>
-<hr>
-
-<div class="callout callout-danger"><h4 id="funcionamiento-de-gulpjs">Funcionamiento de Gulp.js</h4><div><p>1.- Instalaci&#xF3;n de Gulp.js</p><pre><code class="lang-html">$ npm install gulp --save-dev
-</code></pre><p><img src="../images/instalando_gulp.png" alt="Image"></p><p><strong>Nota:</strong></p><pre><code class="lang-undefined">Podemos verificar que gulp se ha instalado 
-  correctamente ejecutando el siguiente comando:
-</code></pre><pre><code class="lang-undefined">$ gulp -v
-</code></pre><p>2.- Creamos en nuestro proyecto el fichero <a href="gulpfile.html">gulpfile.js</a>.</p><p>3.- Instalamos y agregamos nuevas dependencias como, por ejemplo: gulp-concat, gulp-shell, gulp-uglify, ...
-Podemos encontrar una lista de plugins de gulp haciendo click <a href="http://gulpjs.com/plugins/" target="_blank">aqui</a></p><p>4.- Configuramos cada tarea(task) que se desea automatizar, siguiendo
-el esquema:</p><pre><code class="lang-js"><span class="hljs-comment">/*
-* Configuraci&#xF3;n de una tarea
-*/</span>
-gulp.task(<span class="hljs-string">&apos;nombre_tarea&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// Contenido de la tarea &apos;demo&apos;</span>
-});
-</code></pre><p>5.- Llamamos a la tarea previamente configurada desde consola</p><pre><code class="lang-bash">$ gulp <span class="hljs-string">&quot;nombre_tarea&quot;</span>
-</code></pre></div></div>
-<hr>
-
-<div class="callout callout-success"><h4 id="enlaces-e-inter&#xE9;s">Enlaces e inter&#xE9;s</h4><div><p>1.- <a href="https://frontendlabs.io/1669--gulp-js-en-espanol-tutorial-basico-primeros-pasos-y-ejemplos" target="_blank">Ejemplo sencillo de creaci&#xF3;n de gulpfile</a>
-2.- <a href="https://github.com/gulpjs/gulp/" target="_blank">Repositorio en Github de gulpjs</a></p></div></div>
-<hr>
-
-<div class="callout callout-success"><h4 id="videotutoriales-explicativo-sobre-el-uso-de-gulpjs-instalaci&#xF3;n-plugins-">Videotutoriales explicativo sobre el uso de Gulp.js (instalaci&#xF3;n, plugins, ...)</h4><div><p>{ % youtube % }</p><p><a href="https://www.youtube.com/watch?v=wNlEK8qrb0M&amp;index=1&amp;list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos" target="_blank">https://www.youtube.com/watch?v=wNlEK8qrb0M&amp;index=1&amp;list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos</a></p><p>{ % endyoutube % }</p></div></div>
-
+                                
                                 
                                 </section>
                             
@@ -431,7 +393,7 @@ gulp.task(<span class="hljs-string">&apos;nombre_tarea&apos;</span>, <span class
 
             
                 
-                <a href="../section3/libro_gitbook.html" class="navigation navigation-prev " aria-label="Previous page: Desplegando un libro en gitbook">
+                <a href="../section3/gh_pages.html" class="navigation navigation-prev " aria-label="Previous page: ¿Qué son las gh-pages y cómo se utilizan?">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -447,32 +409,14 @@ gulp.task(<span class="hljs-string">&apos;nombre_tarea&apos;</span>, <span class
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gulp","level":"1.5","depth":1,"next":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]},"previous":{"title":"Desplegando un libro en gitbook","level":"1.4.3","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulp.md","mtime":"2016-09-29T12:32:06.273Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T12:33:09.794Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gulp","level":"1.5","depth":1,"next":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]},"previous":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"section4/gulp.md","mtime":"2016-09-28T16:51:33.744Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-29T12:47:14.481Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -498,7 +442,6 @@ gulp.task(<span class="hljs-string">&apos;nombre_tarea&apos;</span>, <span class
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
-
 
     </body>
 </html>
