@@ -374,7 +374,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="gulpfile">Gulpfile</h1>
+<p>Gulpfile es el archivo o fichero de configuraci&#xF3;n que Gulp necesita
+para saber que tareas realizar&#xE1; y ejecutar&#xE1;.</p>
+<div class="callout callout-danger"><h4 id="estructura-del-fichero">Estructura del fichero</h4><div><p><strong>Tasks:</strong>
+  Una vez incluidas los plugins de gulp necesarios para configurar las tareas,
+  creamos los tasks. Como primer par&#xE1;metro aceptar&#xE1;n un nombre identificativo de la tarea
+  y como segundo la funci&#xF3;n a ejecutar cuando se invoque:</p><pre><code class="lang-undefined">gulp.task(&quot;nombre_tarea&quot;,function(){
+    });
+
+**Default task:**
+    Representa aquella tarea que puede ser invocada desde l&#xED;nea de comandos
+    simplemente introduciendo &quot;gulp&quot;, sin llamar a ning&#xFA;n task en particular:
+</code></pre><pre><code class="lang-undefined">$ gulp
+</code></pre><pre><code class="lang-undefined">Definici&#xF3;n y sintaxis:
+</code></pre><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, function()
+{
+});
+</code></pre><pre><code class="lang-undefined">Podemos configurar la *Default task* a modo de que ejecute autom&#xE1;ticamente
+algunas subtareas configuradas en el gulpfile.js:
+</code></pre><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, [&apos;deploy&apos;]);
+</code></pre><p>```</p></div></div>
+<hr>
+
+<div class="callout callout-danger"><h4 id="ejemplos">Ejemplos:</h4><div><pre><code class="lang-undefined">var gulp = require(&apos;gulp&apos;);
+var coffee = require(&apos;gulp-coffee&apos;);
+var concat = require(&apos;gulp-concat&apos;);
+var uglify = require(&apos;gulp-uglify&apos;);
+var imagemin = require(&apos;gulp-imagemin&apos;);
+var sourcemaps = require(&apos;gulp-sourcemaps&apos;);
+var del = require(&apos;del&apos;);
+var paths = {
+  scripts: [&apos;client/js/**/*.coffee&apos;, &apos;!client/external/**/*.coffee&apos;],
+  images: &apos;client/img/**/*&apos;
+};
+// Not all tasks need to use streams
+// A gulpfile is just another node program and you can use any package available on npm
+gulp.task(&apos;clean&apos;, function() {
+  // You can use multiple globbing patterns as you would with `gulp.src`
+  return del([&apos;build&apos;]);
+});
+gulp.task(&apos;scripts&apos;, [&apos;clean&apos;], function() {
+  // Minify and copy all JavaScript (except vendor scripts)
+  // with sourcemaps all the way down
+  return gulp.src(paths.scripts)
+    .pipe(sourcemaps.init())
+      .pipe(coffee())
+      .pipe(uglify())
+      .pipe(concat(&apos;all.min.js&apos;))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(&apos;build/js&apos;));
+});
+// Copy all static images
+gulp.task(&apos;images&apos;, [&apos;clean&apos;], function() {
+  return gulp.src(paths.images)
+    // Pass in options to the task
+    .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(gulp.dest(&apos;build/img&apos;));
+});
+// Rerun the task when a file changes
+gulp.task(&apos;watch&apos;, function() {
+  gulp.watch(paths.scripts, [&apos;scripts&apos;]);
+  gulp.watch(paths.images, [&apos;images&apos;]);
+});
+// The default task (called when you run `gulp` from cli)
+gulp.task(&apos;default&apos;, [&apos;watch&apos;, &apos;scripts&apos;, &apos;images&apos;]);
+</code></pre></div></div>
+<hr>
+
+<div class="callout callout-danger"><h4 id="videotutoriales-explicativo-sobre-el-uso-de-gulpjs-instalaci&#xF3;n-plugins-">Videotutoriales explicativo sobre el uso de Gulp.js (instalaci&#xF3;n, plugins, ...)</h4><div></div></div>
+
                                 
                                 </section>
                             
@@ -417,7 +486,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"next":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"previous":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"dir":"neutral"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulpfile.md","mtime":"2016-09-28T16:51:33.744Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T12:56:32.014Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"next":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"previous":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulpfile.md","mtime":"2016-09-29T13:23:24.379Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T13:35:45.853Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
