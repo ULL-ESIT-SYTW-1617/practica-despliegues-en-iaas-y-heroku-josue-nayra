@@ -73,7 +73,7 @@ Este plugin permite introducir ejercicios interactivos, a modo de que el lector 
 { % exercise % }
 Definir una variable res que contenga el resultado de la siguiente operacion: (5-4).
 { % initial % }
-var res =
+var resultado =
 { % solution % }
 var resultado = 1;
 { % validation % }
@@ -83,19 +83,18 @@ function magicFunc() {
     return 3;
 }
 { % endexercise % }
->
 ```
-
-{% exercise %}
+  
+{ % exercise % }
 Definir una variable res que contenga el resultado de la siguiente operacion: (5-4).
-{% initial %}
+{ % initial % }
 var resultado =
-{% solution %}
+{ % solution % }
 var resultado = 1;
-{% validation %}
+{ % validation % }
 assert(resultado == 1);
-{% context %}
+{ % context % }
 function magicFunc() {
     return 3;
 }
-{% endexercise %}
+{ % endexercise % }

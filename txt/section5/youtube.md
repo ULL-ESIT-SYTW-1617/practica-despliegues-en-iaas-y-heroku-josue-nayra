@@ -46,8 +46,6 @@ $ gitbook install
 
 ** Video ** 
 
-{% youtube %}
-http://www.youtube.com/watch?v=kdpfRLpu0FQ
-{% endyoutube %}
+{% youtube %}http://www.youtube.com/watch?v=kdpfRLpu0FQ{% endyoutube %}
 
 
