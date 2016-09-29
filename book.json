@@ -1,7 +1,11 @@
 {
+    "root" : "txt",
     "gitbook": "3.1.1",
     "title": "Gitbook para apuntes. Asignatura SYTW16-17",
-    "plugins": ["exercises", "youtube", "bootstrap-callout"],
+    "plugins": [
+        "exercises", 
+        "youtube",
+        "bootstrap-callout"],
     "structure": {
         "readme": "README.md"
     },
