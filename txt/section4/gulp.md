@@ -18,7 +18,7 @@ sin necesidad de escribir en disco.
 
 >- Alta calidad: Política de desarrollo basada en plugins simples de fácil uso para el usuario.
 
->- Fácil de aprender: Posibilidad de acces a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
+>- Fácil de aprender: Posibilidad de acceso a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
 de nuestra app sea más sencilla.
   
 
