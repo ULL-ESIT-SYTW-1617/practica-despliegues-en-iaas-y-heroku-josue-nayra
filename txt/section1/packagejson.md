@@ -20,9 +20,9 @@ Archivo para gestionar los paquetes npm instalados localmente.
 
 > - **name:** Por defecto a menos que el nombre del autor en un gitdirectorio, en cuyo caso será el nombre del repositorio
 > - **version:** siempre 1.0.0
-> - **main:** siempre index.js
-> - **scripts:** Por defecto crea un vacío testguión
-> - **keywords:** vacío
+> - **main:** siempre el index.js
+> - **scripts:** Por defecto se crea vacío, pueden incluirse scripts que pueden ejecutarse con el comando npm.
+> - **keywords:** Palabras claves.
 > - **author:** Lo que nos ha facilitado la CLI
 > - **license:** ISC
 > - **repository:** Se tire en la información del directorio actual, si está presente

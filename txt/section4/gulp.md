@@ -9,19 +9,28 @@ Está construido con Javascript, funcionando sobre Node.js
 Además, es de Open Source, de modo que su código fuente es accesible desde github a partir de este [enlace](https://github.com/gulpjs/gulp/).
 
 >- #### primary::Ventajas
->-Fácil de usar:  Tareas complejas que se convierten en otras más manejables. 
->-Eficiente: Construcciones más rápidas, sin necesidad de escribir archivos intermedios en el disco.
+
+> -Fácil de usar:  Tareas complejas que se convierten en otras más manejables. 
+
+> -Eficiente: Construcciones más rápidas, sin necesidad de escribir archivos intermedios en el disco.
 En definitiva, comparandolo con [Grunt.js](http://gruntjs.com/), realizará las mismas operaciones pero en menos tiempo y
 sin necesidad de escribir en disco.
+
 >- Alta calidad: Política de desarrollo basada en plugins simples de fácil uso para el usuario.
+
 >- Fácil de aprender: Posibilidad de acces a múltiples prácticas de Node que combinadas con un mantenimiento mínimo de la API facilita que la labor de construcción 
 de nuestra app sea más sencilla.
   
-  
-> Grunt.s 
->      ![Imagen](../images/funcinamiento_grunt.png)
+<hr />
+
+>- #### primary::Gulpjs vs Gruntjs
+
+> Grunt.s
+
+>      ![](../images/funcinamiento_grunt.png)
 
 > Gulp.js 
+
 >      ![Imagen](../images/funcionamiento_gulp.png)
 
 
@@ -67,7 +76,7 @@ $ gulp "nombre_tarea"
 
 <hr />
 
->- #### primary::Enlaces e interés
+>- #### primary::Enlaces de interés
 
 > 1.- [Ejemplo sencillo de creación de gulpfile](https://frontendlabs.io/1669--gulp-js-en-espanol-tutorial-basico-primeros-pasos-y-ejemplos)  
 
@@ -77,7 +86,7 @@ $ gulp "nombre_tarea"
 
 <hr />
 
->- #### primary::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
+>- #### primary::Videotutorial explicativo sobre el uso de Gulp.js
 
 
 > {% youtube %}https://www.youtube.com/watch?v=wNlEK8qrb0M&index=1&list=PLLnpHn493BHE2RsdyUNpbiVn-cfuV7Fos{% endyoutube %}

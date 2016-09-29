@@ -5,49 +5,54 @@ para saber que tareas realizará y ejecutará.
 
 
 >- #### primary::Estructura del fichero
-> **Plugins**
->   Cualquier plugin que haya sido instalado y que sea necesario para ejecutar una tarea 
->   determinada se incluirá en el inicio del gulpfile como dependencia:
+
+> **Plugins:**
+
+> Cualquier plugin que haya sido instalado y que sea necesario para ejecutar una tarea 
+> determinada se incluirá en el inicio del gulpfile como dependencia:
 > 
-    ```
-    var gulp = require('gulp');
-    var "nombre_asignado_plugin" = require("nombre_plugin_instalado");
-    ```
+```
+var gulp = require('gulp');
+var "nombre_asignado_plugin" = require("nombre_plugin_instalado");
+```
 
 > **Tasks:**
->   Una vez incluidas los plugins de gulp necesarios para configurar las tareas,
->   creamos los tasks. Como primer parámetro aceptarán un nombre identificativo de la tarea
->   y como segundo la función a ejecutar cuando se invoque:
+
+> Una vez incluidas los plugins de gulp necesarios para configurar las tareas,
+> creamos los tasks. Como primer parámetro aceptarán un nombre identificativo de la tarea
+> y como segundo la función a ejecutar cuando se invoque:
 
 > 
 ```
-    gulp.task("nombre_tarea",function(){
-    });
-    
+gulp.task("nombre_tarea",function(){
+});
+```
+
 > **Default task:**
-    Representa aquella tarea que puede ser invocada desde línea de comandos
-    simplemente introduciendo "gulp", sin llamar a ningún task en particular:
+
+> Representa aquella tarea que puede ser invocada desde línea de comandos
+> simplemente introduciendo "gulp", sin llamar a ningún task en particular:
 >
 ```
     $ gulp
 ```
-    Definición y sintaxis:
->
+
+> Definición y sintaxis:
 ```
-    gulp.task('default', function()
-    {
-    });
+gulp.task('default', function()
+{
+});
 ```
 > Podemos configurar la *Default task* a modo de que ejecute automáticamente
 algunas subtareas configuradas en el gulpfile.js:
 > 
 ```
-    gulp.task('default', ['deploy']);
+    gulp.task('default', ['subtarea']);
 ```
 
 <hr />
 
->- #### primary::Ejemplos:
+>- #### primary::Ejemplo:
 >
 ```
 var gulp = require('gulp');

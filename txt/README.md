@@ -3,53 +3,53 @@
 >- #### primary:: Tareas Iniciales. JavaScript. NodeJS. Gulpfile. Gitbook
 
 
-> - Instale NodeJS
+> **1.- Instale NodeJS**
 
->    - Comprueba que npm funciona
+>    1.1- Comprueba que npm funciona
 
->    - Instala expressjs
+>    1.2- Instala expressjs
 
 
->   Instala Git. Si estás en Windows sigue las instrucciones en
+> **2.- Instala Git. Si estás en Windows sigue las instrucciones en**
 
 >   [https://git-for-windows.github.io/](https://git-for-windows.github.io/)
 
 >   [https://desktop.github.com/](https://desktop.github.com/)
 
->   Instalar gitbook en tu ordenador (o bien usa c9)
+> **3.- Instalar gitbook en tu ordenador (o bien usa c9)**
 
->   Aprenda a utilizar GitBook escribiendo la documentación en formato MarkDown de como ha realizado esta primera práctica, incluyendo secciones:
+> **4.- Aprenda a utilizar GitBook escribiendo la documentación en formato MarkDown de como ha realizado esta primera práctica, incluyendo secciones:**
 
->      Qué es GitBook y como se utiliza
+>    4.1- Qué es GitBook y como se utiliza
 
->      Qué son las gh-pages y como se utilizan
+>    4.2- Qué son las gh-pages y como se utilizan
 
->      Módulo gh-pages para automatizar el despliegue en gh-pages 
+>    4.3- Módulo gh-pages para automatizar el despliegue en gh-pages 
 
->      Despliegue un libro en www.gitbook.com
+>    4.4- Despliegue un libro en www.gitbook.com
 
->      Qué es nodeJS
+>    4.5- Qué es nodeJS
 
->      npm
+>    4.6- npm
 
->      package.json
+>    4.7- package.json
 
->      Gulpfile
+>    4.8- Gulpfile
 
 
->   Aprenda a usar los GitBook Plugins
+> **5.-Aprenda a usar los GitBook Plugins**
  
 <hr />
 
 
 >- #### primary:: Requisitos:
 
->   Deberá de desplegar su libro en gh-pages
+> 1.- Deberá de desplegar su libro en gh-pages
 
->   Deberá de desplegar su libro en GitBook
+> 2.- Deberá de desplegar su libro en GitBook
 
->   Añada un Gulpfile con tareas que automaticen la construcción y despliegue del libro en los diferentes sites
+> 3.- Añada un Gulpfile con tareas que automaticen la construcción y despliegue del libro en los diferentes sites
 
->   Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
+> 4.- Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
 
->   Use algun GitBook Plugin en sus apuntes
+> 5.- Use algun GitBook Plugin en sus apuntes 
