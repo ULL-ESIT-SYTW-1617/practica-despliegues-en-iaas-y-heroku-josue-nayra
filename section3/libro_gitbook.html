@@ -349,29 +349,29 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="desplegando-un-libro-en-gitbook">Desplegando un libro en Gitbook</h2>
-<div class="callout callout-primary"><h4 id="instalaci&#xF3;n-y-despliegue-de-gitbook"> Instalaci&#xF3;n y Despliegue de Gitbook</h4><div><pre><code class="lang-undefined">npm init
-npm install -g gitbook-cli --save
-gitbook init
+<div class="callout callout-primary"><h4 id="instalaci&#xF3;n-y-despliegue-de-gitbook"> Instalaci&#xF3;n y Despliegue de Gitbook</h4><div><pre><code class="lang-bash">$ npm init
+$ npm install -g gitbook-cli --save
+$ gitbook init
 </code></pre><p>En el directorio de gitbook se crear&#xE1;n los archivos:</p><ul>
 <li><strong>README.md</strong> que contiene la introducci&#xF3;n al libro.</li>
 <li><strong>SUMMARY.md</strong> cuyo funcionamiento es de una tabla de contenido.</li>
 </ul><p>Puede existir tambi&#xE9;n un directorio <em>/txt</em> o <em>/docs</em>, por ejemplo, que puede contener otros archivos
 markdown como cap&#xED;tulos de su libro.
-Estos archivos deben ser actualizados en la tabla de contenido del fichero SUMMARY.md.</p><p>Ejemplo del archivo SUMMARY.md</p><pre><code class="lang-undefined"># Indice
+Estos archivos deben ser actualizados en la tabla de contenido del fichero SUMMARY.md.</p><p>Ejemplo del archivo SUMMARY.md</p><pre><code class="lang-markdown"><span class="hljs-section"># Indice</span>
 Este es el indice de nuestro gitbook.
-* [Nodejs](section1/nodejs.md)
-    * [Comando npm](section1/npm.md)
-    * [Expressjs](section1/expressjs.md)
-    * [Fichero package.json](section1/packagejson.md)
+<span class="hljs-bullet">* </span>[<span class="hljs-string">Nodejs</span>](<span class="hljs-link">section1/nodejs.md</span>)
+<span class="hljs-code">    * [Comando npm](section1/npm.md)</span>
+<span class="hljs-code">    * [Expressjs](section1/expressjs.md)</span>
+<span class="hljs-code">    * [Fichero package.json](section1/packagejson.md)</span>
 </code></pre><p>A continuaci&#xF3;n se genera gitbook y tambi&#xE9;n la wiki con el siguiente comando,
-que invoca a los scripts <strong><em>&quot;generate-gitbook&quot;</em></strong> y <strong><em>&quot;gerenate-wiki&quot;</em></strong>.</p><pre><code class="lang-undefined">npm run build
-# or
-# npm run generate-gitbook &amp;&amp; npm run generate-wiki
+que invoca a los scripts <strong><em>&quot;generate-gitbook&quot;</em></strong> y <strong><em>&quot;gerenate-wiki&quot;</em></strong>.</p><pre><code class="lang-bash">$ npm run build
+<span class="hljs-comment"># or</span>
+<span class="hljs-comment"># npm run generate-gitbook &amp;&amp; npm run generate-wiki</span>
 </code></pre><p>Seguidamente se ejecutar&#xE1; el comando que invocar&#xE1; a los scripts <strong><em>&quot;deploy-gitbook&quot;</em></strong> 
-y <strong><em>&quot;deploy-wiki&quot;</em></strong> encargados de la construcci&#xF3;n del libro.</p><pre><code class="lang-undefined">npm run deploy
-# or
-# npm run deploy-gitbook &amp;&amp; npm run deploy-wiki
-</code></pre><p><strong>Nota:</strong> Es importante crear primero la Wiki del repositorio en Github.</p><p>Con el siguiente comando Gitbook le permite probar su libro antes de subirlo a la web:</p><pre><code class="lang-undefined">$ gitbook serve
+y <strong><em>&quot;deploy-wiki&quot;</em></strong> encargados de la construcci&#xF3;n del libro.</p><pre><code class="lang-bash">$ npm run deploy
+<span class="hljs-comment"># or</span>
+<span class="hljs-comment"># npm run deploy-gitbook &amp;&amp; npm run deploy-wiki</span>
+</code></pre><p><strong>Nota:</strong> Es importante crear primero la Wiki del repositorio en Github.</p><p>Con el siguiente comando Gitbook le permite probar su libro antes de subirlo a la web:</p><pre><code class="lang-bash">$ gitbook serve
 </code></pre></div></div>
 
                                 
@@ -416,7 +416,7 @@ y <strong><em>&quot;deploy-wiki&quot;</em></strong> encargados de la construcci&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"next":{"title":"Scripts","level":"1.4.2","depth":2,"path":"section3/scripts.md","ref":"section3/scripts.md","articles":[]},"previous":{"title":"Gitbook","level":"1.4","depth":1,"path":"section3/gitbook.md","ref":"section3/gitbook.md","articles":[{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},{"title":"Scripts","level":"1.4.2","depth":2,"path":"section3/scripts.md","ref":"section3/scripts.md","articles":[]},{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/libro_gitbook.md","mtime":"2016-09-29T16:41:22.167Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T20:08:25.841Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"next":{"title":"Scripts","level":"1.4.2","depth":2,"path":"section3/scripts.md","ref":"section3/scripts.md","articles":[]},"previous":{"title":"Gitbook","level":"1.4","depth":1,"path":"section3/gitbook.md","ref":"section3/gitbook.md","articles":[{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},{"title":"Scripts","level":"1.4.2","depth":2,"path":"section3/scripts.md","ref":"section3/scripts.md","articles":[]},{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/libro_gitbook.md","mtime":"2016-09-29T20:11:51.238Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T20:16:02.445Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
