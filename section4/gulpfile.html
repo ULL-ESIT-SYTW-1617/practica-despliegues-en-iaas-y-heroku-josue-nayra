@@ -352,64 +352,64 @@
 <p>Gulpfile es el archivo o fichero de configuraci&#xF3;n que Gulp necesita
 para saber que tareas realizar&#xE1; y ejecutar&#xE1;.</p>
 <div class="callout callout-primary"><h4 id="estructura-del-fichero">Estructura del fichero</h4><div><p><strong>Plugins:</strong></p><p>Cualquier plugin que haya sido instalado y que sea necesario para ejecutar una tarea 
-determinada se incluir&#xE1; en el inicio del gulpfile como dependencia:</p><pre><code class="lang-undefined">var gulp = require(&apos;gulp&apos;);
-var &quot;nombre_asignado_plugin&quot; = require(&quot;nombre_plugin_instalado&quot;);
+determinada se incluir&#xE1; en el inicio del gulpfile como dependencia:</p><pre><code class="lang-js"><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>);
+<span class="hljs-keyword">var</span> <span class="hljs-string">&quot;nombre_asignado_plugin&quot;</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;nombre_plugin_instalado&quot;</span>);
 </code></pre><p><strong>Tasks:</strong></p><p>Una vez incluidas los plugins de gulp necesarios para configurar las tareas,
 creamos los tasks. Como primer par&#xE1;metro aceptar&#xE1;n un nombre identificativo de la tarea
-y como segundo la funci&#xF3;n a ejecutar cuando se invoque:</p><pre><code class="lang-undefined">gulp.task(&quot;nombre_tarea&quot;,function(){
+y como segundo la funci&#xF3;n a ejecutar cuando se invoque:</p><pre><code class="lang-js">gulp.task(<span class="hljs-string">&quot;nombre_tarea&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
 });
 </code></pre><p><strong>Default task:</strong></p><p>Representa aquella tarea que puede ser invocada desde l&#xED;nea de comandos
-simplemente introduciendo &quot;gulp&quot;, sin llamar a ning&#xFA;n task en particular:</p><pre><code class="lang-undefined">$ gulp
-</code></pre><p>Definici&#xF3;n y sintaxis:</p><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, function()
-{
+simplemente introduciendo &quot;gulp&quot;, sin llamar a ning&#xFA;n task en particular:</p><pre><code class="lang-bash">$ gulp
+</code></pre><p>Definici&#xF3;n y sintaxis:</p><pre><code class="lang-js">gulp.task(<span class="hljs-string">&apos;default&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)
+</span>{
 });
 </code></pre><p>Podemos configurar la <em>Default task</em> a modo de que ejecute autom&#xE1;ticamente
-algunas subtareas configuradas en el gulpfile.js:</p><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, [&apos;subtarea&apos;]);
+algunas subtareas configuradas en el gulpfile.js:</p><pre><code class="lang-js">gulp.task(<span class="hljs-string">&apos;default&apos;</span>, [<span class="hljs-string">&apos;subtarea&apos;</span>]);
 </code></pre></div></div>
 <hr>
 
-<div class="callout callout-primary"><h4 id="ejemplo">Ejemplo:</h4><div><pre><code class="lang-undefined">var gulp = require(&apos;gulp&apos;);
-var coffee = require(&apos;gulp-coffee&apos;);
-var concat = require(&apos;gulp-concat&apos;);
-var uglify = require(&apos;gulp-uglify&apos;);
-var imagemin = require(&apos;gulp-imagemin&apos;);
-var sourcemaps = require(&apos;gulp-sourcemaps&apos;);
-var del = require(&apos;del&apos;);
-var paths = {
-  scripts: [&apos;client/js/**/*.coffee&apos;, &apos;!client/external/**/*.coffee&apos;],
-  images: &apos;client/img/**/*&apos;
+<div class="callout callout-primary"><h4 id="ejemplo">Ejemplo:</h4><div><pre><code class="lang-js"><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>);
+<span class="hljs-keyword">var</span> coffee = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-coffee&apos;</span>);
+<span class="hljs-keyword">var</span> concat = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-concat&apos;</span>);
+<span class="hljs-keyword">var</span> uglify = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-uglify&apos;</span>);
+<span class="hljs-keyword">var</span> imagemin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-imagemin&apos;</span>);
+<span class="hljs-keyword">var</span> sourcemaps = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-sourcemaps&apos;</span>);
+<span class="hljs-keyword">var</span> del = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;del&apos;</span>);
+<span class="hljs-keyword">var</span> paths = {
+  scripts: [<span class="hljs-string">&apos;client/js/**/*.coffee&apos;</span>, <span class="hljs-string">&apos;!client/external/**/*.coffee&apos;</span>],
+  images: <span class="hljs-string">&apos;client/img/**/*&apos;</span>
 };
-// Not all tasks need to use streams
-// A gulpfile is just another node program and you can use any package available on npm
-gulp.task(&apos;clean&apos;, function() {
-  // You can use multiple globbing patterns as you would with `gulp.src`
-  return del([&apos;build&apos;]);
+<span class="hljs-comment">// Not all tasks need to use streams</span>
+<span class="hljs-comment">// A gulpfile is just another node program and you can use any package available on npm</span>
+gulp.task(<span class="hljs-string">&apos;clean&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// You can use multiple globbing patterns as you would with `gulp.src`</span>
+  <span class="hljs-keyword">return</span> del([<span class="hljs-string">&apos;build&apos;</span>]);
 });
-gulp.task(&apos;scripts&apos;, [&apos;clean&apos;], function() {
-  // Minify and copy all JavaScript (except vendor scripts)
-  // with sourcemaps all the way down
-  return gulp.src(paths.scripts)
+gulp.task(<span class="hljs-string">&apos;scripts&apos;</span>, [<span class="hljs-string">&apos;clean&apos;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Minify and copy all JavaScript (except vendor scripts)</span>
+  <span class="hljs-comment">// with sourcemaps all the way down</span>
+  <span class="hljs-keyword">return</span> gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
       .pipe(coffee())
       .pipe(uglify())
-      .pipe(concat(&apos;all.min.js&apos;))
+      .pipe(concat(<span class="hljs-string">&apos;all.min.js&apos;</span>))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(&apos;build/js&apos;));
+    .pipe(gulp.dest(<span class="hljs-string">&apos;build/js&apos;</span>));
 });
-// Copy all static images
-gulp.task(&apos;images&apos;, [&apos;clean&apos;], function() {
-  return gulp.src(paths.images)
-    // Pass in options to the task
-    .pipe(imagemin({optimizationLevel: 5}))
-    .pipe(gulp.dest(&apos;build/img&apos;));
+<span class="hljs-comment">// Copy all static images</span>
+gulp.task(<span class="hljs-string">&apos;images&apos;</span>, [<span class="hljs-string">&apos;clean&apos;</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> gulp.src(paths.images)
+    <span class="hljs-comment">// Pass in options to the task</span>
+    .pipe(imagemin({optimizationLevel: <span class="hljs-number">5</span>}))
+    .pipe(gulp.dest(<span class="hljs-string">&apos;build/img&apos;</span>));
 });
-// Rerun the task when a file changes
-gulp.task(&apos;watch&apos;, function() {
-  gulp.watch(paths.scripts, [&apos;scripts&apos;]);
-  gulp.watch(paths.images, [&apos;images&apos;]);
+<span class="hljs-comment">// Rerun the task when a file changes</span>
+gulp.task(<span class="hljs-string">&apos;watch&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  gulp.watch(paths.scripts, [<span class="hljs-string">&apos;scripts&apos;</span>]);
+  gulp.watch(paths.images, [<span class="hljs-string">&apos;images&apos;</span>]);
 });
-// The default task (called when you run `gulp` from cli)
-gulp.task(&apos;default&apos;, [&apos;watch&apos;, &apos;scripts&apos;, &apos;images&apos;]);
+<span class="hljs-comment">// The default task (called when you run `gulp` from cli)</span>
+gulp.task(<span class="hljs-string">&apos;default&apos;</span>, [<span class="hljs-string">&apos;watch&apos;</span>, <span class="hljs-string">&apos;scripts&apos;</span>, <span class="hljs-string">&apos;images&apos;</span>]);
 </code></pre></div></div>
 <hr>
 
@@ -457,7 +457,7 @@ gulp.task(&apos;default&apos;, [&apos;watch&apos;, &apos;scripts&apos;, &apos;im
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"next":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"previous":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulpfile.md","mtime":"2016-09-29T19:32:34.083Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T19:54:54.074Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"next":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"previous":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulpfile.md","mtime":"2016-09-29T20:01:42.086Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T20:08:25.841Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
