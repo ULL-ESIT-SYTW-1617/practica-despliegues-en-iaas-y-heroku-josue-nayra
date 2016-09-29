@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="scripts.html" />
+    <link rel="next" href="../section4/gulp.html" />
     
     
-    <link rel="prev" href="gitbook.html" />
+    <link rel="prev" href="gh_pages.html" />
     
 
     </head>
@@ -195,12 +195,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="libro_gitbook.html">
+        <li class="chapter " data-level="1.4.1" data-path="que_es_gitbook.html">
             
-                <a href="libro_gitbook.html">
+                <a href="que_es_gitbook.html">
             
                     
-                    Desplegando un libro en gitbook
+                    ¿Qué es Gitbook y cómo se utiliza?
             
                 </a>
             
@@ -208,25 +208,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="scripts.html">
-            
-                <a href="scripts.html">
-            
-                    
-                    Scripts
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="gh_pages.html">
+        <li class="chapter " data-level="1.4.2" data-path="gh_pages.html">
             
                 <a href="gh_pages.html">
             
                     
                     ¿Qué son las gh-pages y cómo se utilizan?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="libro_gitbook.html">
+            
+                <a href="libro_gitbook.html">
+            
+                    
+                    Desplegando un libro en gitbook
             
                 </a>
             
@@ -374,47 +374,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="desplegando-un-libro-en-gitbook">Desplegando un libro en Gitbook</h2>
-<h4 id="instalaci&#xF3;n-de-gitbook">Instalaci&#xF3;n de Gitbook</h4>
-<pre><code class="lang-undefined">npm init
-npm install -g gitbook-cli --save
-gitbook init
-</code></pre>
-<p>En el directorio de gitbook se crear&#xE1;n los archivos:</p>
-<ul>
-<li><strong>README.md</strong> que contiene la introducci&#xF3;n al libro.</li>
-<li><strong>SUMMARY.md</strong> cuyo funcionamiento es de una tabla de contenido.</li>
-</ul>
-<p>Puede existir tambi&#xE9;n un directorio <em>/txt</em> o <em>/docs</em>, por ejemplo, que puede contener otros archivos
-markdown como cap&#xED;tulos de su libro.
-Estos archivos deben ser actualizados en la tabla de contenido del fichero SUMMARY.md.</p>
-<p>Ejemplo del archivo SUMMARY.md</p>
-<pre><code class="lang-undefined"># Indice
-
-Este es el indice de nuestro gitbook.
-
-* [Nodejs](section1/nodejs.md)
-    * [Comando npm](section1/npm.md)
-    * [Expressjs](section1/expressjs.md)
-    * [Fichero package.json](section1/packagejson.md)
-</code></pre>
-<p>A continuaci&#xF3;n se genera gitbook y tambi&#xE9;n la wiki con el siguiente comando,
-que invoca a los scripts <strong><em>&quot;generate-gitbook&quot;</em></strong> y <strong><em>&quot;gerenate-wiki&quot;</em></strong>.</p>
-<pre><code class="lang-undefined">npm run build
-# or
-# npm run generate-gitbook &amp;&amp; npm run generate-wiki
-</code></pre>
-<p>Seguidamente se ejecutar&#xE1; el comando que invocar&#xE1; a los scripts <strong><em>&quot;deploy-gitbook&quot;</em></strong> 
-y <strong><em>&quot;deploy-wiki&quot;</em></strong> encargados de la construcci&#xF3;n del libro.</p>
-<pre><code class="lang-undefined">npm run deploy
-# or
-# npm run deploy-gitbook &amp;&amp; npm run deploy-wiki
-</code></pre>
-<p><strong>Nota:</strong> Es importante crear primero la Wiki del repositorio en Github.</p>
-<p>Con el siguiente comando Gitbook le permite probar su libro antes de subirlo a la web:</p>
-<pre><code class="lang-undefined">$ gitbook serve
-</code></pre>
-
+                                
                                 
                                 </section>
                             
@@ -441,12 +401,12 @@ y <strong><em>&quot;deploy-wiki&quot;</em></strong> encargados de la construcci&
 
             
                 
-                <a href="gitbook.html" class="navigation navigation-prev " aria-label="Previous page: Gitbook">
+                <a href="gh_pages.html" class="navigation navigation-prev " aria-label="Previous page: ¿Qué son las gh-pages y cómo se utilizan?">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="scripts.html" class="navigation navigation-next " aria-label="Next page: Scripts">
+                <a href="../section4/gulp.html" class="navigation navigation-next " aria-label="Next page: Gulp">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -457,7 +417,7 @@ y <strong><em>&quot;deploy-wiki&quot;</em></strong> encargados de la construcci&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"next":{"title":"Scripts","level":"1.4.2","depth":2,"path":"section3/scripts.md","ref":"section3/scripts.md","articles":[]},"previous":{"title":"Gitbook","level":"1.4","depth":1,"path":"section3/gitbook.md","ref":"section3/gitbook.md","articles":[{"title":"Desplegando un libro en gitbook","level":"1.4.1","depth":2,"path":"section3/libro_gitbook.md","ref":"section3/libro_gitbook.md","articles":[]},{"title":"Scripts","level":"1.4.2","depth":2,"path":"section3/scripts.md","ref":"section3/scripts.md","articles":[]},{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.3","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/libro_gitbook.md","mtime":"2016-09-29T08:45:10.346Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T09:14:57.386Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Desplegando un libro en gitbook","level":"1.4.3","depth":2,"next":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"previous":{"title":"¿Qué son las gh-pages y cómo se utilizan?","level":"1.4.2","depth":2,"path":"section3/gh_pages.md","ref":"section3/gh_pages.md","articles":[]},"dir":"neutral"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section3/libro_gitbook.md","mtime":"2016-09-26T17:54:19.207Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T12:33:09.794Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
