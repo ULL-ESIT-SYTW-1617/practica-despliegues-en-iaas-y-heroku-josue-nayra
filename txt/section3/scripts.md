@@ -29,7 +29,7 @@ node "$(dirname $0)/generate-wiki.js"
 
 
 Lee el fichero *"package.json"* y obtiene la URL del repositorio remoto.
-A continuación se realiza el despliegue en la rama gh-pages.
+A continuación se realiza el despliegue en la rama gh-pages. 
 
 ```
 #!/bin/sh
