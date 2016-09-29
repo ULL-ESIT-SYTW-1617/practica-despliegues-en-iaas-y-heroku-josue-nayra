@@ -97,4 +97,4 @@ gulp.task('default', ['watch', 'scripts', 'images']);
 <hr />
 
 >- #### danger::Videotutoriales explicativo sobre el uso de Gulp.js (instalación, plugins, ...)
-{ % youtube % }https://www.youtube.com/watch?v=CmNjijfiCrU{ % endyoutube % }
+> {% youtube %} https://www.youtube.com/watch?v=CmNjijfiCrU {% endyoutube %}

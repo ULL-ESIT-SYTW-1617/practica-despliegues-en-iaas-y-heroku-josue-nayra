@@ -1,28 +1,23 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
+var gh_pages = require('gh-pages');
+var watch = require('gulp-watch');
 
-// function deploygh()
-// {
-    
-// }
+gulp.task('construir_gitbook', function()
+{
+    return gulp.src('./scripts')
+        .pipe(shell([
+           "./scripts/losh generate-gitbook" 
+        ]))
+        .pipe(shell([
+           "./scripts/losh generate-wiki"
+        ]))
+        .pipe(shell([
+            "./scripts/losh deploy-wiki"    
+        ]))
+});
 
-// gulp.task('deploy', ['build', 'push'], deploygh); //deploygh --> funcion que trabaja con las gh-pages
+gulp.task('default', function(){
+    gulp.watch(['scripts/*', 'txt/**/*.md', 'book.json'], ['construir_gitbook']); 
+});
 
-// gulp.task('deploygb',
-//     shell.task(
-//         "git ci -am 'deploy to gitbooks'"+
-//         ";"+
-//         "git push gbs master",
-//         { verbose: true}
-//         )
-// );
-
-
-gulp.task('deploy',
-    shell.task(
-        "node -e generate-gitbook",
-    {
-        verbose:true
-    }
-    )
-);
