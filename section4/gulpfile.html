@@ -351,27 +351,26 @@
                                 <h1 id="gulpfile">Gulpfile</h1>
 <p>Gulpfile es el archivo o fichero de configuraci&#xF3;n que Gulp necesita
 para saber que tareas realizar&#xE1; y ejecutar&#xE1;.</p>
-<div class="callout callout-primary"><h4 id="estructura-del-fichero">Estructura del fichero</h4><div><p><strong>Tasks:</strong>
-  Una vez incluidas los plugins de gulp necesarios para configurar las tareas,
-  creamos los tasks. Como primer par&#xE1;metro aceptar&#xE1;n un nombre identificativo de la tarea
-  y como segundo la funci&#xF3;n a ejecutar cuando se invoque:</p><pre><code class="lang-undefined">gulp.task(&quot;nombre_tarea&quot;,function(){
-    });
-
-**Default task:**
-    Representa aquella tarea que puede ser invocada desde l&#xED;nea de comandos
-    simplemente introduciendo &quot;gulp&quot;, sin llamar a ning&#xFA;n task en particular:
-</code></pre><pre><code class="lang-undefined">$ gulp
-</code></pre><pre><code class="lang-undefined">Definici&#xF3;n y sintaxis:
-</code></pre><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, function()
+<div class="callout callout-primary"><h4 id="estructura-del-fichero">Estructura del fichero</h4><div><p><strong>Plugins</strong>
+Cualquier plugin que haya sido instalado y que sea necesario para ejecutar una tarea 
+determinada se incluir&#xE1; en el inicio del gulpfile como dependencia:</p><pre><code class="lang-undefined">var gulp = require(&apos;gulp&apos;);
+var &quot;nombre_asignado_plugin&quot; = require(&quot;nombre_plugin_instalado&quot;);
+</code></pre><p><strong>Tasks:</strong></p><p>Una vez incluidas los plugins de gulp necesarios para configurar las tareas,
+creamos los tasks. Como primer par&#xE1;metro aceptar&#xE1;n un nombre identificativo de la tarea
+y como segundo la funci&#xF3;n a ejecutar cuando se invoque:</p><pre><code class="lang-undefined">gulp.task(&quot;nombre_tarea&quot;,function(){
+});
+</code></pre><p><strong>Default task:</strong>
+Representa aquella tarea que puede ser invocada desde l&#xED;nea de comandos
+simplemente introduciendo &quot;gulp&quot;, sin llamar a ning&#xFA;n task en particular:</p><pre><code class="lang-undefined">$ gulp
+</code></pre><p>Definici&#xF3;n y sintaxis:</p><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, function()
 {
 });
-</code></pre><pre><code class="lang-undefined">Podemos configurar la *Default task* a modo de que ejecute autom&#xE1;ticamente
-algunas subtareas configuradas en el gulpfile.js:
-</code></pre><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, [&apos;deploy&apos;]);
-</code></pre><p>```</p></div></div>
+</code></pre><p>Podemos configurar la <em>Default task</em> a modo de que ejecute autom&#xE1;ticamente
+algunas subtareas configuradas en el gulpfile.js:</p><pre><code class="lang-undefined">gulp.task(&apos;default&apos;, [&apos;deploy&apos;]);
+</code></pre></div></div>
 <hr>
 
-<div class="callout callout-primary"><h4 id="ejemplos">Ejemplos:</h4><div><pre><code class="lang-undefined">var gulp = require(&apos;gulp&apos;);
+<div class="callout callout-primary"><h4 id="ejemplo">Ejemplo:</h4><div><pre><code class="lang-undefined">var gulp = require(&apos;gulp&apos;);
 var coffee = require(&apos;gulp-coffee&apos;);
 var concat = require(&apos;gulp-concat&apos;);
 var uglify = require(&apos;gulp-uglify&apos;);
@@ -460,7 +459,7 @@ gulp.task(&apos;default&apos;, [&apos;watch&apos;, &apos;scripts&apos;, &apos;im
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"next":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"previous":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulpfile.md","mtime":"2016-09-29T17:43:42.418Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T19:23:10.250Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"next":{"title":"Gitbook Plugins","level":"1.6","depth":1,"path":"section5/gitbook.md","ref":"section5/gitbook.md","articles":[{"title":"Exercises","level":"1.6.1","depth":2,"path":"section5/exercises.md","ref":"section5/exercises.md","articles":[]},{"title":"Youtube","level":"1.6.2","depth":2,"path":"section5/youtube.md","ref":"section5/youtube.md","articles":[]},{"title":"Bootstrap","level":"1.6.3","depth":2,"path":"section5/bootstrap.md","ref":"section5/bootstrap.md","articles":[]}]},"previous":{"title":"Gulp","level":"1.5","depth":1,"path":"section4/gulp.md","ref":"section4/gulp.md","articles":[{"title":"¿Qué es gulpfile?","level":"1.5.1","depth":2,"path":"section4/gulpfile.md","ref":"section4/gulpfile.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises","youtube","bootstrap-callout"],"root":"txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000},"bootstrap-callout":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook para apuntes. Asignatura SYTW16-17","gitbook":"3.1.1"},"file":{"path":"section4/gulpfile.md","mtime":"2016-09-29T19:28:14.227Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-09-29T19:30:05.852Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
