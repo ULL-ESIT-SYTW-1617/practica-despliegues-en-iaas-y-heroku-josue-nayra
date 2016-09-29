@@ -2,7 +2,7 @@ Desplegando un libro en Gitbook
 -------------
 
 
->- #### primary:: Instalación de Gitbook
+>- #### primary:: Instalación y Despliegue de Gitbook
 
 > 
 ```

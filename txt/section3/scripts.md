@@ -2,7 +2,7 @@ Scripts
 -------------
 
 
->- #### primary:: Generate-gitbook
+> #### primary:: Generate-gitbook
 >
 ```
 #!/bin/sh
@@ -11,7 +11,7 @@ CMDDESC="Generate GitBook"
 ```
 
 
->- #### primary:: Generate-wiki
+> #### primary:: Generate-wiki
 >
 ```
 #!/bin/sh
@@ -20,7 +20,7 @@ node "$(dirname $0)/generate-wiki.js"
 ```
 
 
->- #### primary:: Deploy-gitbook
+> #### primary:: Deploy-gitbook
 
 
 > Lee el fichero *"package.json"* y obtiene la URL del repositorio remoto.
@@ -34,7 +34,7 @@ node -e "require('gh-pages').publish('./gh-pages', { repo: '$REPO', logger: func
 ```
 
 
->- #### primary:: Deploy-wiki
+> #### primary:: Deploy-wiki
 >
 ```
 #!/bin/bash
