@@ -7,19 +7,19 @@ Este plugin permite introducir ventanas o llamadas que resaltan bloques de conte
 
 > - Debemos instalar el siguiente paquete  y añadirlo a nuestro package.json: 
 >
-```
+```bash
 $ npm install gitbook-plugin-bootstrap-callout --save-dev
 ```
 > - Una vez instalado, debemos incorporar el plugin en nuestro fichero book.json
 >
-``` 
+```json 
 {
     "plugins": ["bootstrap-callout"]
 }
 ```
 > - Finalmente, ejecutamos el siguiente comando para instalar y preparar el plugin:
 >
-```
+```bash
 $ gitbook install
 ```
 

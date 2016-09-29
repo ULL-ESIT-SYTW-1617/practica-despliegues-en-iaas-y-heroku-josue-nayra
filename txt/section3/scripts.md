@@ -4,7 +4,7 @@ Scripts
 
 >- #### primary:: Generate-gitbook
 >
-```
+```bash
 #!/bin/sh
 CMDDESC="Generate GitBook"
 ./node_modules/.bin/gitbook build ./txt ./gh-pages
@@ -13,7 +13,7 @@ CMDDESC="Generate GitBook"
 <hr />
 >- #### primary:: Generate-wiki
 >
-```
+```bash
 #!/bin/sh
 CMDDESC="Generate Wiki"
 node "$(dirname $0)/generate-wiki.js"
@@ -26,7 +26,7 @@ node "$(dirname $0)/generate-wiki.js"
 > Lee el fichero *"package.json"* y obtiene la URL del repositorio remoto.
 A continuación se realiza el despliegue en la rama gh-pages. 
 >
-```
+```bash
 #!/bin/sh
 CMDDESC="Deploy GitBook on Github"
 REPO=$(node -e "console.log(require('./package.json').repository.url);")
@@ -36,7 +36,7 @@ node -e "require('gh-pages').publish('./gh-pages', { repo: '$REPO', logger: func
 <hr />
 >- #### primary:: Deploy-wiki
 >
-```
+```bash
 #!/bin/bash
 # source: https://raw.githubusercontent.com/christianalfoni/react-webpack-cookbook/master/scripts/deploy-wiki.sh
 # this script expects that a gh-pages build exists already

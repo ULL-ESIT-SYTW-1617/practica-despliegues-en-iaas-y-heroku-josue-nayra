@@ -81,7 +81,7 @@ $ git push origin master
 >  Actualizar el repositorio local al commit más nuevo para bajar y fusionar los cambios remotos.
 >
 ```bash
-$ git pull
+$ git pull origin master
 ```
      
 >   Para fusionar otra rama a tu rama activa (master en este caso):

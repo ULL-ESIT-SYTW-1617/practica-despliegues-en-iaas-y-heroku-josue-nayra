@@ -5,10 +5,10 @@ Desplegando un libro en Gitbook
 >- #### primary:: Instalación y Despliegue de Gitbook
 
 > 
-```
-npm init
-npm install -g gitbook-cli --save
-gitbook init
+```bash
+$ npm init
+$ npm install -g gitbook-cli --save
+$ gitbook init
 ```
 
 > En el directorio de gitbook se crearán los archivos: 
@@ -21,7 +21,7 @@ markdown como capítulos de su libro.
 
 > Ejemplo del archivo SUMMARY.md
 >
-```
+```markdown
 # Indice
 Este es el indice de nuestro gitbook.
 * [Nodejs](section1/nodejs.md)
@@ -34,8 +34,8 @@ Este es el indice de nuestro gitbook.
 > A continuación se genera gitbook y también la wiki con el siguiente comando,
 que invoca a los scripts ***"generate-gitbook"*** y ***"gerenate-wiki"***.
 >
-```
-npm run build
+```bash
+$ npm run build
 # or
 # npm run generate-gitbook && npm run generate-wiki
 ```
@@ -43,8 +43,8 @@ npm run build
 > Seguidamente se ejecutará el comando que invocará a los scripts ***"deploy-gitbook"*** 
 y ***"deploy-wiki"*** encargados de la construcción del libro.
 >
-```
-npm run deploy
+```bash
+$ npm run deploy
 # or
 # npm run deploy-gitbook && npm run deploy-wiki
 ```
@@ -54,6 +54,6 @@ npm run deploy
 
 > Con el siguiente comando Gitbook le permite probar su libro antes de subirlo a la web:
 >
-```
+```bash
 $ gitbook serve 
 ```
