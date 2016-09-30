@@ -12,6 +12,11 @@
 >[Github](https://github.com/alu0100406122)
 
 
+### Libro en Gitbok
+
+[Despliege del libro](https://ull-esit-sytw-1617.github.io/tareas-iniciales-josue-nayra/)
+
+
 
 ### Requisitos
 
