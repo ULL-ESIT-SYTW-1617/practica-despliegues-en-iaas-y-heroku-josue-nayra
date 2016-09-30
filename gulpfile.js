@@ -6,6 +6,9 @@ gulp.task('construir_gitbook', function()
 {
     return gulp.src('./scripts')
         .pipe(shell([
+            "gitbook install"
+        ]))        
+        .pipe(shell([
            "./scripts/losh generate-gitbook" 
         ]))
         .pipe(shell([
@@ -26,6 +29,13 @@ gulp.task('construir_gitbook', function()
 //         )
 // });
 
+// gulp.task('subir_repo', function(){
+//     return gulp.src('').pipe(shell([
+//         'git add . '+
+//         'git commit -m "Probando task en gulpfile" '+
+//         'git push origin master'
+//     ]))
+// });
 
 gulp.task('default', function(){
     gulp.watch(['scripts/*', 'txt/**/*.md', 'book.json'], ['construir_gitbook']); 

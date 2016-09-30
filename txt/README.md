@@ -53,3 +53,17 @@
 > 4.- Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
 
 > 5.- Use algun GitBook Plugin en sus apuntes 
+
+
+<hr />
+
+>- #### primary:: Participantes:
+
+> 1.- Josué Toledo Castro
+
+> [Página personal en Github](https://github.com/JosueTC94)
+
+
+> 2.- María Nayra Rodríguez Pérez
+
+> [Página personal en Github](https://github.com/alu0100406122)
