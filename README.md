@@ -15,6 +15,7 @@
 ### Libro en Gitbook
 
 [Despliege del libro en gh-pages](https://ull-esit-sytw-1617.github.io/tareas-iniciales-josue-nayra/)
+
 [Despliegue del libro en gitbook](https://josuetc94.gitbooks.io/practica1_sytw1617_tareasiniciales/content/)
 
 
