@@ -12,9 +12,10 @@
 >[Github](https://github.com/alu0100406122)
 
 
-### Libro en Gitbok
+### Libro en Gitbook
 
-[Despliege del libro](https://ull-esit-sytw-1617.github.io/tareas-iniciales-josue-nayra/)
+[Despliege del libro en gh-pages](https://ull-esit-sytw-1617.github.io/tareas-iniciales-josue-nayra/)
+[Despliegue del libro en gitbook](https://josuetc94.gitbooks.io/practica1_sytw1617_tareasiniciales/content/)
 
 
 ### Campus de la asignatura
