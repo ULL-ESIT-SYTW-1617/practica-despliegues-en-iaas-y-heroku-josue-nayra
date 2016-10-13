@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ssh 10.6.128.176 'cd src/sytw/express; git pull origin master'
+ssh usuario@10.6.128.176 'cd src/sytw/; git pull origin master'
 
