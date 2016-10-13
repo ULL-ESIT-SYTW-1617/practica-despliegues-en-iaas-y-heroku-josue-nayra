@@ -1,6 +1,21 @@
-# Práctica 1. Sistemas y Tecnologías Web
+# Práctica 3. Sistemas y Tecnologías Web
 
-## Tareas Iniciales. JavaScript. NodeJS. Gulpfile. Gitbook
+## Desplieges en IASS y Heroku
+
+
+### Descripción
+
+
+El objetivo de esta práctica es proporcionar un mecanismo de despliegue de un libro gitbook de manera que un deploy a github produzca la actualización automática de los otros sites de despliegue:
+- gitboook.com
+- Heroku
+ 
+
+Para lograr este objetivo usaremos la técnica descrita en el artículo Colaboración: The Perfect Work-flow with Git, GitHub, and SSH.
+
+En iaas.ull.es, debido a que la IP de la máquina virtual es privada a la red de la ULL.
+Para sincronizar con iaas.ull.es disponga un script que utilice ssh y/o scp para actualizar los ficheros necesarios al repositorio del libro en la máquina virtual.
+
 
 
 ### Integrantes
@@ -25,45 +40,4 @@
 
 
 
-### Requisitos
 
-> 1.- Deberá de desplegar su libro en gh-pages
-
-> 2.- Deberá de desplegar su libro en GitBook
-
-> 3.- Añada un Gulpfile con tareas que automaticen la construcción y despliegue del libro en los diferentes sites
-
-> 4.- Utilizar los issues de GitHub para indicar las incidencias, problemas y progresos del proyecto
-
-> 5.- Use algun GitBook Plugin en sus apuntes 
-
-
-
-### GitBook Boilerplate 
-
-
-#### Installation
-
-```shell
-cd ~/code
-
-git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
-
-cd awesome-project
-
-rm -fr .git
-
-vi package.json
-# edit repository.url and repository.wiki
-
-git remote add origin <url>
-
-npm run build
-# or
-# npm run generate-gitbook && npm run generate-wiki
-
-npm run deploy
-# or
-# npm run deploy-gitbook && npm run deploy-wiki
-```
-__Important__: Wiki must be created on Github

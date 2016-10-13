@@ -1,47 +1,17 @@
 {
-  "name": "gitbook-boilerplate",
-  "version": "0.0.1",
-  "description": "GitBook Boilerplate",
-  "main": "index.js",
+  "name": "practica-despliegues-en-iaas-y-heroku-josue-nayra",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "generate-gitbook": "./scripts/losh generate-gitbook",
-    "generate-wiki": "./scripts/losh generate-wiki",
-    "build": "npm install && npm i gitbook-cli && npm run generate-gitbook && npm run generate-wiki",
-    "deploy-gitbook": "./scripts/losh deploy-gitbook",
-    "deploy-wiki": "./scripts/losh deploy-wiki",
-    "deploy": "npm run build && npm run deploy-gitbook && npm run deploy-wiki",
-    "version": "./scripts/losh version",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-josue-nayra.git",
-    "wiki": "https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-josue-nayra.wiki.git"
-  },
-  "keywords": [
-    "gitbook",
-    "boilerplate",
-    "starter"
-  ],
-  "author": "Nayra Rodriguez-Josue Toledo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-josue-nayra/issues"
-  },
-  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-josue-nayra#readme",
-  "devDependencies": {
-    "async": "^1.4.0",
-    "fs-extra": "^0.22.1",
-    "gh-pages": "^0.3.1",
-    "gitbook": "^2.1.0",
-    "gitbook-cli": "^0.3.4",
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.5.2",
-    "gulp-watch": "^4.3.10"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "gitbook-plugin-bootstrap-callout": "^0.1.1",
-    "gitbook-plugin-exercises": "^2.1.1",
-    "gitbook-plugin-youtube": "^1.1.0"
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
   }
 }
