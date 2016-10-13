@@ -13,6 +13,20 @@
     "version": "./scripts/losh version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.git",
+    "wiki": "https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.wiki.git"
+  },
+  "author": "Nayra Rodriguez-Josue Toledo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra/issues"
+  },
+  "homepage": "git@github.com:ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.git",
+  "engines": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "async": "^2.1.1",
     "debug": "~2.2.0",

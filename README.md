@@ -38,6 +38,8 @@ Para sincronizar con iaas.ull.es disponga un script que utilice ssh y/o scp para
 
 [Enlace al campus virtual](https://campusvirtual.ull.es/1617/course/view.php?id=1175)
 
+[Enlace a la descripción de la práctica]()
+
 
 
 
