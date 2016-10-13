@@ -33,9 +33,9 @@ gulp.task('push', function(){
 //Ejecución del script generate-gitbook
 gulp.task('generate-gitbook',function()
 {
-    if (!fs.existsSync(path.join(__dirname, 'gh-pages'))){
-        fs.mkdirSync(path.join(__dirname, 'gh-pages'));
-    }
+    // if (!fs.existsSync(path.join(__dirname, 'gh-pages'))){
+    //     fs.mkdirSync(path.join(__dirname, 'gh-pages'));
+    // }
     new Promise((resolve,reject) =>{
        return run(path.join(__dirname,'scripts','generate-gitbook')).exec(); 
     });
