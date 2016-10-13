@@ -25,6 +25,8 @@ $ gitbook install
 
 <hr />
 
+
+
 ¿Cómo podemos usar este plugin?
 -------------
 

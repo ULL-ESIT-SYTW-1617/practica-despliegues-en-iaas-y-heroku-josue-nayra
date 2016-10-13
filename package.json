@@ -1,5 +1,5 @@
 {
-  "name": "practica-despliegues-en-iaas-y-heroku-josue-nayra",
+  "name": "express",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -23,29 +23,36 @@
   "bugs": {
     "url": "https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra/issues"
   },
-  "homepage": "git@github.com:ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.git",
+  "homepage": "https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra",
+  "devDependencies": {
+    "async": "^1.4.0",
+    "fs-extra": "^0.22.1",
+    "gh-pages": "^0.3.1",
+    "gitbook": "^2.1.0",
+    "gitbook-cli": "^0.3.4",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2",
+    "gulp-watch": "^4.3.10"
+  },
   "engines": {
     "node": "0.10.x"
   },
   "dependencies": {
-    "async": "^2.1.1",
     "debug": "~2.2.0",
-    "express": "^4.13.4",
+    "express": "~4.13.4",
     "express-ejs-layouts": "^2.2.0",
     "fs-extra": "^0.30.0",
     "gh-pages": "^0.11.0",
     "gitbook": "^3.2.2",
-    "gitbook-cli": "^2.3.0",
     "gitbook-plugin-bootstrap-callout": "^0.1.1",
     "gitbook-plugin-exercises": "^2.1.1",
     "gitbook-plugin-youtube": "^1.1.0",
-    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-install": "^0.6.0",
     "gulp-run": "^1.7.1",
-    "gulp-shell": "^0.5.2",
     "nodemon": "^1.11.0",
+    "path": "^0.12.7",
     "q": "^1.4.1",
-    "serve-favicon": "~2.3.0",
     "simple-git": "^1.54.0"
   }
 }
