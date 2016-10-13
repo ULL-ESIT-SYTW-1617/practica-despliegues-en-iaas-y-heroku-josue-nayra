@@ -56,17 +56,17 @@ gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook'
 {
     console.log("Deploy task");
     
-    fs.remove(path.join(__dirname,'wiki','.git'));
-    new Promise((resolve,reject) => {
-        git(path.join(__dirname,'wiki'))
-        .init()
-        .add('./*')
-        .commit("Deploy to wiki")
-        .addRemote('origin', json.repository.wiki)
-        .push(['--force', 'origin', 'master:master'], resolve)
-    });
+    // fs.remove(path.join(__dirname,'wiki','.git'));
+    // new Promise((resolve,reject) => {
+    //     git(path.join(__dirname,'wiki'))
+    //     .init()
+    //     .add('./*')
+    //     .commit("Deploy to wiki")
+    //     .addRemote('origin', json.repository.wiki)
+    //     .push(['--force', 'origin', 'master:master'], resolve)
+    // });
     
-    // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
+    return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
 });
 
 gulp.task('actualizando_iaas', function(){
