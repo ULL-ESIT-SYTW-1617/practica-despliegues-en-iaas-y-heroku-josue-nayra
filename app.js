@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
   response.send('index');  
 });
 
-app.post('/sync', (request, response) => {
+app.post('/sync', function(request, response) {
         function puts(error, stdout, stderr) {
            console.log(stdout)
            if(error) console.log(error);
