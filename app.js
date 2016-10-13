@@ -21,13 +21,14 @@ app.get('/', function(request, response) {
   response.send('index');  
 });
 
-app.post('/sincronizacion', function(request, response){
-    
-    function puts(error, stdout, stderr){
-        console.log(stdout);
-    }
-    
-    exec('git pull origin master',puts);
+app.post('/sync', (request, response) => {
+        function puts(error, stdout, stderr) {
+           console.log(stdout)
+           if(error) console.log(error);
+         }
+
+   exec('heroku login');
+   exec("git pull origin master", puts);
 });
 
 app.listen(app.get('port'), function() {
