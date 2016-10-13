@@ -8,6 +8,7 @@ var expressLayouts = require('express-ejs-layouts');
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
+app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'gh-pages')));
 
 app.use(expressLayouts);
@@ -16,7 +17,7 @@ app.use(expressLayouts);
 app.set('port', (process.env.PORT || 8080));
  
 app.get('/', function(request, response){
-  response.sendFile(path.join(__dirname,'gh-pages', 'index'));
+  response.sendFile('index');
 });
 
 
