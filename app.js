@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
+var exec = require('child_process').exec;
 
 
 
@@ -18,6 +19,13 @@ app.use(express.static(path.join(__dirname,'gh-pages')));
 
 app.get('/', function(request, response) {
   response.send('index');  
+});
+
+app.post('/sincronizacion', function(request, response){
+    function puts(error, stdout, stderr){
+        console.log(stdout);
+    }
+    exec('git pull origin master',puts);
 });
 
 app.listen(app.get('port'), function() {
