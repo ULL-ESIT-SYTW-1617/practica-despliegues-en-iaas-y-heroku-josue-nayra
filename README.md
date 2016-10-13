@@ -1,6 +1,6 @@
 # Práctica 3. Sistemas y Tecnologías Web
 
-## Desplieges en IASS y Heroku
+## Despliegues en IASS y Heroku
 
 
 ### Descripción
@@ -34,6 +34,8 @@ Para sincronizar con iaas.ull.es disponga un script que utilice ssh y/o scp para
 [Despliegue del libro en gitbook](https://josuetc94.gitbooks.io/practica1_sytw1617_tareasiniciales/content/)
 
 [Despliegue en iaas]()
+
+[Despliegue en Heroku]()
 
 
 ### Campus de la asignatura
