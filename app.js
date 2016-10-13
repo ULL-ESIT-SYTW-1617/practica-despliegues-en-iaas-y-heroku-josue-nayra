@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,'gh-pages')));
 
 
 app.get('/', function(request, response) {
-  response.send('Hello World');  
+  response.send('index');  
 });
 
 app.listen(app.get('port'), function() {
