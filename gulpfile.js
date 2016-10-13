@@ -55,7 +55,7 @@ gulp.task('deploy-gitbook', function()
 gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook'], function()
 {
     console.log("Deploy task");
-    
+     
     fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
     new Promise((resolve,reject) => {
         git(path.resolve(path.join(__dirname,'wiki')))
