@@ -22,9 +22,11 @@ app.get('/', function(request, response) {
 });
 
 app.post('/sincronizacion', function(request, response){
+    
     function puts(error, stdout, stderr){
         console.log(stdout);
     }
+    
     exec('git pull origin master',puts);
 });
 
