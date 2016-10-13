@@ -11,7 +11,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'gh-pages')));
 
 
-app.set('port', (process.env.PORT || 5050));
+app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function(request, response){
   response.sendFile('index');
