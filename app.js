@@ -5,7 +5,7 @@ var expressLayouts = require('express-ejs-layouts');
 
 
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', 80);
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,'gh-pages')));
 
 
 app.get('/', function(request, response) {
-  response.sendFile(path.join(__dirname,'gh-pages','index.html'));  
+  response.send('index');  
 });
 
 app.listen(app.get('port'), function() {
