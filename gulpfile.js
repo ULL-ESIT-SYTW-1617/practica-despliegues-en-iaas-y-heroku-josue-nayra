@@ -60,7 +60,7 @@ gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook'
     new Promise((resolve,reject) => {
         git(path.join(__dirname,'wiki'))
         .init()
-        .add(path.join(__dirname,'wiki','*'))
+        .add('./*')
         .commit("Deploy to wiki")
         .addRemote('origin', json.repository.wiki)
         .push(['--force', 'origin', 'master:master'], resolve)
