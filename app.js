@@ -23,11 +23,12 @@ app.get('/', function(request, response) {
 
 app.post('/sync', function(request, response) {
         function puts(error, stdout, stderr) {
-           console.log(stdout)
-           if(error) console.log(error);
+           console.log("Salida:"+stdout);
+           if(error) console.log("Error:"+error);
          }
-
+   exec('git clone https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.git'); 
    exec("git pull https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.git master", puts);
+   response.redirect('/');
 }); 
 
 app.listen(app.get('port'), function() {
