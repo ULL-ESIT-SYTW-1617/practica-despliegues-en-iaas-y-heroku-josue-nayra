@@ -52,20 +52,19 @@ gulp.task('deploy-gitbook', function()
     ghpages.publish(path.join(__dirname, 'gh-pages'), function(err) { if(err) console.error("Error:" + err); });
 });
 
-gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook'], function()
+gulp.task('eliminar_wiki', function(){
+        fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
+});
+
+gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
 {
     console.log("Deploy task");
-     
-    fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
-    new Promise((resolve,reject) => {
-        git(path.resolve(path.join(__dirname,'wiki')))
+    git(path.resolve(path.join(__dirname,'wiki')))
         .init()
         .add('./*')
         .commit("Deploy to wiki")
         .addRemote('origin', json.repository.wiki)
-        .push(['--force', 'origin', 'master:master'], resolve)
-    });
-    
+        .push(['--force', 'origin', 'master:master'])
     // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
 });
 
