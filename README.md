@@ -18,6 +18,16 @@ Ejemplo de ssh:
     $ ssh sytw 'cd src/express-start; git ls-files'
 ```
 
+Configuración de la máquina
+
+```
+Host sytw
+HosName 10.6.128.176
+User usuario
+Port 22
+IdentityFile ~/.ssh/id_rsa
+```
+
 En este ejemplo nos conectamos a la máquina "sytw" y ejecutamos en la misma un comando que nos posiciona en el directorio adecuado y llama al comando git.
 Previamente se ha realizado un alias de la IP a "sytw" configurando el archivo **~/.ssh/config**
 
