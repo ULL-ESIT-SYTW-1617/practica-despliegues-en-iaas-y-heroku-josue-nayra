@@ -1,4 +1,4 @@
 #!/bin/sh
 
-ssh usuario@10.6.128.176 'cd src/sytw/; git pull origin master'
+ssh usuario@10.6.128.176 'cd src/sytw/practica-despliegues-en-iaas-y-heroku-josue-nayra; git pull origin master'
 
