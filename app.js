@@ -28,7 +28,7 @@ app.post('/sync', function(request, response) {
          }
 
 //   exec('heroku login');
-   exec("git pull origin master", puts);
+   exec("git pull httpurl master", puts);
 }); 
 
 app.listen(app.get('port'), function() {
