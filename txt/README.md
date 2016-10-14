@@ -6,7 +6,7 @@
 ### Descripción
   
 
-El objetivo de esta práctica es proporcionar un mecanismo de despliegue de un libro gitbook de manera que un deploy a github produzca la actualización automática de los otros sites de despliegue:
+El objetivo principal de esta práctica es proporcionar un mecanismo de despliegue de un libro gitbook de manera que un deploy a github produzca la actualización automática de los otros sites de despliegue:
 - **gitboook.com**
 - **Heroku**
  

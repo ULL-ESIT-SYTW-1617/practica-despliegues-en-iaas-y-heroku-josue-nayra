@@ -27,8 +27,7 @@ app.post('/sync', function(request, response) {
            if(error) console.log(error);
          }
 
-//   exec('heroku login');
-   exec("git pull httpurl master", puts);
+   exec("git pull https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-josue-nayra.git master", puts);
 }); 
 
 app.listen(app.get('port'), function() {
