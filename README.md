@@ -1,6 +1,6 @@
 # Práctica 3. Sistemas y Tecnologías Web
 
-## Despliegues en IASS y Heroku
+## Despliegues en IAAS y Heroku
 
 
 ### Descripción
