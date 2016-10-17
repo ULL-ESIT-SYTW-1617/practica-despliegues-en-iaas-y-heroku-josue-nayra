@@ -8,10 +8,10 @@ var Q = require('q');
 var run = require('gulp-run');
 var git = require('simple-git');
 var fs = require('fs-extra');
-var ghpages = require('gh-pages');
-// var ghPages = require('gulp-gh-pages');
 
+var ghPages = require('gulp-gh-pages');
 
+//---------------------------------------------------------------------------------
 //Actualizar repositorio
 //Push al repo
 gulp.task('push', function(){
@@ -32,6 +32,8 @@ gulp.task('push', function(){
     }
 });
 
+
+//---------------------------------------------------------------------------------
 //Ejecución del script generate-gitbook
 gulp.task('generate-gitbook',function()
 {
@@ -43,20 +45,27 @@ gulp.task('generate-gitbook',function()
     });
 });
 
+//---------------------------------------------------------------------------------
+
 gulp.task('generate-wiki', function(){
     return run(path.join(__dirname,'scripts','generate-wiki')).exec();
 });
 
+//---------------------------------------------------------------------------------
+
 gulp.task('deploy-gitbook', function()
 {
-    // return gulp.src(path.join(__dirname,'gh-pages'))
-    //       .pipe(ghPages());
-    ghpages.publish(path.resolve(path.join(__dirname, 'gh-pages')), function(err) { if(err) console.error("Error:"); });
+    return gulp.src(path.join(__dirname,'gh-pages'))
+          .pipe(ghPages());
 });
+
+//---------------------------------------------------------------------------------
 
 gulp.task('eliminar_wiki', function(){
         fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
 });
+
+//---------------------------------------------------------------------------------
 
 gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
 {
@@ -70,9 +79,13 @@ gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook'
     // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
 });
 
+//---------------------------------------------------------------------------------
+
 gulp.task('actualizando_iaas', function(){
     return run(path.join(__dirname,'scripts','upload_iaas')).exec();
 });
+
+//---------------------------------------------------------------------------------
 
 gulp.task('instalar_recursos',['instalar_dependencias','instalar_plugins']);
 
@@ -88,6 +101,7 @@ gulp.task('instalar_plugins', function()
     ])) 
 });
 
+//---------------------------------------------------------------------------------
 
 gulp.task('default', function(){
     gulp.watch(['scripts/*', 'txt/**/*.md', 'book.json'], ['deploy']); 
