@@ -8,7 +8,7 @@ El objetivo principal de esta práctica es proporcionar un mecanismo de desplieg
 - **gitboook.com**
 - **Heroku**
  
-Para sincronizar con **iaas.ull.es** se dispone de un script que utiliza ssh para actualizar los ficheros necesarios al repositorio del libro en la máquina virtual.
+Para sincronizar con ***iaas.ull.es*** se dispone de un script que utiliza ssh para actualizar los ficheros necesarios al repositorio del libro en la máquina virtual.
 
 Ejemplo de ssh:
 
