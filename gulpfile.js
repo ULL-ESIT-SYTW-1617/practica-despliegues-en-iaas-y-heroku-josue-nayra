@@ -103,6 +103,5 @@ gulp.task('instalar_plugins', function()
 
 //---------------------------------------------------------------------------------
 
-gulp.task('default', function(){
-    gulp.watch(['scripts/*', 'txt/**/*.md', 'book.json'], ['deploy']); 
-});
+gulp.task('default', ['instalar_recursos', 'push', 'deploy']);
+
