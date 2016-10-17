@@ -13,21 +13,23 @@ var ghpages = require('gh-pages');
 
 
 //Actualizar repositorio
-//Push inicial
-gulp.task('push_inicial', function(){
-    git()
-        .init()
-        .add('./*')
-        .commit("first commit")
-        .addRemote('origin', json.repository.url)
-        .push('origin', 'master'); 
-});
 //Push al repo
 gulp.task('push', function(){
-    git()
-        .add('./*')
-        .commit("Actualizando gitbook")
-        .push('origin', 'master');
+    if (!fs.existsSync(path.join(__dirname, '.git'))){
+        git()
+            .init()
+            .add('./*')
+            .commit("first commit")
+            .addRemote('origin', json.repository.url)
+            .push('origin', 'master');     
+    }
+    else
+    {
+         git()
+            .add('./*')
+            .commit("Actualizando gitbook")
+            .push('origin', 'master');   
+    }
 });
 
 //Ejecución del script generate-gitbook
