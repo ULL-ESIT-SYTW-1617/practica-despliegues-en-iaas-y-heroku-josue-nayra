@@ -81,7 +81,7 @@ gulp.task('push', function(){
 //     // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
 // });
 
-gulp.task('deploy', ['push'], function(){
+gulp.task('deploy', function(){
    return gulp.src(path.join(__dirname, 'scripts'))
           .pipe(shell(['./scripts/losh generate-gitbook']))
           .pipe(shell(['./scripts/losh generate-wiki']))
