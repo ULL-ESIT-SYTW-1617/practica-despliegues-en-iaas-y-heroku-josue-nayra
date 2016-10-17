@@ -34,7 +34,7 @@
     "express-ejs-layouts": "^2.2.0",
     "fs-extra": "^0.30.0",
     "gh-pages": "^0.11.0",
-    "gitbook": "^3.2.2",
+    "gitbook-cli": "^2.3.0",
     "gitbook-plugin-bootstrap-callout": "^0.1.1",
     "gitbook-plugin-exercises": "^2.1.1",
     "gitbook-plugin-youtube": "^1.1.0",

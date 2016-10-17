@@ -8,9 +8,8 @@ var Q = require('q');
 var run = require('gulp-run');
 var git = require('simple-git');
 var fs = require('fs-extra');
-
 var ghPages = require('gulp-gh-pages');
-
+ 
 //---------------------------------------------------------------------------------
 //Actualizar repositorio
 //Push al repo
@@ -35,53 +34,60 @@ gulp.task('push', function(){
 
 //---------------------------------------------------------------------------------
 //Ejecución del script generate-gitbook
-gulp.task('generate-gitbook',function()
-{
-    if (!fs.existsSync(path.join(__dirname, 'gh-pages'))){
-        fs.mkdirSync(path.join(__dirname, 'gh-pages'));
-    }
-    // new Promise((resolve,reject) =>{
-    //   return run(path.join(__dirname,'scripts','generate-gitbook')).exec(); 
-    // });
-    new Promise((resolve, reject) =>{
-       return gulp.src('').pipe(shell(['./scripts/losh generate-gitbook'])); 
-    });
-});
+// gulp.task('generate-gitbook',function()
+// {
+//     if (!fs.existsSync(path.join(__dirname, 'gh-pages'))){
+//         fs.mkdirSync(path.join(__dirname, 'gh-pages'));
+//     }
+//     // new Promise((resolve,reject) =>{
+//     //   return run(path.join(__dirname,'scripts','generate-gitbook')).exec(); 
+//     // });
+//     new Promise((resolve, reject) =>{
+//       return gulp.src('').pipe(shell(['./scripts/losh generate-gitbook'])); 
+//     });
+// });
+
+// //---------------------------------------------------------------------------------
+
+// gulp.task('generate-wiki', function(){
+//     return run(path.join(__dirname,'scripts','generate-wiki')).exec();
+// });
+
+// //---------------------------------------------------------------------------------
+
+// gulp.task('deploy-gitbook', function()
+// {
+//     return gulp.src(path.join(__dirname,'gh-pages'))
+//           .pipe(ghPages());
+// });
+
+// //---------------------------------------------------------------------------------
+
+// gulp.task('eliminar_wiki', function(){
+//         fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
+// });
 
 //---------------------------------------------------------------------------------
 
-gulp.task('generate-wiki', function(){
-    return run(path.join(__dirname,'scripts','generate-wiki')).exec();
+// gulp.task('deploy', ['generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
+// {
+//     console.log("Deploy task");
+//     git(path.resolve(path.join(__dirname,'wiki')))
+//         .init()
+//         .add('./*')
+//         .commit("Deploy to wiki")
+//         .addRemote('origin', json.repository.wiki)
+//         .push(['--force', 'origin', 'master:master'])
+//     // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
+// });
+
+gulp.task('deploy', ['push'], function(){
+   return gulp.src(path.join(__dirname, 'scripts'))
+          .pipe(shell(['./scripts/losh generate-gitbook']))
+          .pipe(shell(['./scripts/losh generate-wiki']))
+          .pipe(shell(['./scripts/losh deploy-gitbook']))
+          .pipe(shell(['./scripts/losh deploy-wiki']))
 });
-
-//---------------------------------------------------------------------------------
-
-gulp.task('deploy-gitbook', function()
-{
-    return gulp.src(path.join(__dirname,'gh-pages'))
-          .pipe(ghPages());
-});
-
-//---------------------------------------------------------------------------------
-
-gulp.task('eliminar_wiki', function(){
-        fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
-});
-
-//---------------------------------------------------------------------------------
-
-gulp.task('deploy', ['generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
-{
-    console.log("Deploy task");
-    git(path.resolve(path.join(__dirname,'wiki')))
-        .init()
-        .add('./*')
-        .commit("Deploy to wiki")
-        .addRemote('origin', json.repository.wiki)
-        .push(['--force', 'origin', 'master:master'])
-    // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
-});
-
 //---------------------------------------------------------------------------------
 
 gulp.task('actualizando_iaas', function(){
@@ -106,5 +112,4 @@ gulp.task('instalar_plugins', function()
 
 //---------------------------------------------------------------------------------
 
-gulp.task('default', ['instalar_recursos', 'push', 'deploy']);
-
+gulp.task('default', ['deploy']);
