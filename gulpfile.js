@@ -67,7 +67,7 @@ gulp.task('eliminar_wiki', function(){
 
 //---------------------------------------------------------------------------------
 
-gulp.task('deploy', ['push','generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
+gulp.task('deploy', ['generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
 {
     console.log("Deploy task");
     git(path.resolve(path.join(__dirname,'wiki')))
