@@ -4,11 +4,11 @@ var install = require('gulp-install');
 var path = require('path');
 var json = require(path.join(__dirname,'package.json'));
 // var gitbook = require('gitbook');
-var Q = require('q');
+
 var run = require('gulp-run');
 var git = require('simple-git');
 var fs = require('fs-extra');
-var ghPages = require('gulp-gh-pages');
+// var ghPages = require('gulp-gh-pages');
  
 //---------------------------------------------------------------------------------
 //Actualizar repositorio
