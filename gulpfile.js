@@ -51,7 +51,7 @@ gulp.task('deploy-gitbook', function()
 {
     // return gulp.src(path.join(__dirname,'gh-pages'))
     //       .pipe(ghPages());
-    ghpages.publish(path.join(__dirname, 'gh-pages'), function(err) { if(err) console.error("Error:"); });
+    ghpages.publish(path.resolve(path.join(__dirname, 'gh-pages')), function(err) { if(err) console.error("Error:"); });
 });
 
 gulp.task('eliminar_wiki', function(){
