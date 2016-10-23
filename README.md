@@ -10,15 +10,24 @@ El objetivo de esta práctica es proporcionar un mecanismo de despliegue de un l
 - **gitboook.com**
 - **Heroku**
  
-Para sincronizar con **iaas.ull.es** se dispone de un script que utiliza ssh para actualizar los ficheros necesarios al repositorio del libro en la máquina virtual.
 
-Ejemplo de ssh:
+
+### Desplegando en el IAAS
+
+Para desplegar en este servidor debemos realizar los siguientes pasos:
+
+1.- Configurar una **pareja de claves** SSH privada-pública.
 
 ```bash
-    $ ssh sytw 'cd src/express-start; git ls-files'
+$ ssh-keygen -t rsa -f iaas 
+```
+2.- Copiamos la clave pública en la máquina del IAAS. De este modo, cuando intentemos actualizar nuestro gitbook en el IAAS, no se nos exigirá introducir un usuario y un password.
+
+```bash
+$ scp ~/.ssh/iaas <usuario>@<ip_maquina_iaas>:~/.ssh/
 ```
 
-Configuración de la máquina
+Además, podemos configurar en nuestra máquina local un alias de la IP del IAAS con la que queremos realizar la conexión:
 
 ```
 Host sytw
@@ -28,12 +37,74 @@ Port 22
 IdentityFile ~/.ssh/id_rsa
 ```
 
-En este ejemplo nos conectamos a la máquina "sytw" y ejecutamos en la misma un comando que nos posiciona en el directorio adecuado y llama al comando git.
-Previamente se ha realizado un alias de la IP a "sytw" configurando el archivo **~/.ssh/config**
+De este modo, si ejecutamos el siguiente comando conectaremos directamente a través de ssh con nuestra máquina:
 
-Si se tiene establecida una pareja de claves SSH privada-pública entre la máquina de desarrollo (que se supone en la red de la ULL) y la máquina virtual, es posible usar ssh para conectarse a la máquina virtual y hacer un git pull en el directorio adecuado.
+```
+$ ssh sytw
+```
 
-Esta tarea se ha automatizado en el **gulpfile.js** mediante la task: **"actualizando_iaas"**
+3.- Una vez controlado el acceso a la máquina, nos conectamos y **clonamos el repositorio** dónde se encuentra nuestro gitbook:
+
+```bash
+    $ ssh sytw 'cd src/sytw/practica-despliegues-en-iaas-y-heroku-josue-nayra; git clone <url del repositorio>'
+```
+
+4.- Para actualizar nuestro gitbook en **iaas.ull.es**, se dispone de un script (archivo upload_iaas dentro del directorio scripts/), que utiliza ssh para actualizar los ficheros necesarios al repositorio del libro en la máquina virtual.
+
+```bash
+    $ ssh sytw 'cd src/sytw/practica-despliegues-en-iaas-y-heroku-josue-nayra; git pull origin master'
+```
+
+La ejecución de este script se ha automatizado en la tarea dispuesta en el gulpfile denominada "actualizando_iaas".
+
+5.- Para poder visualizar correctamente nuestro gitbook alojado en la máquina IAAS a través de un navegador web, debemos configurar el puerto en el fichero app.js
+Por defecto, se ha considerado el puerto 80.
+
+```javascript
+app.set('port', process.env.PORT || 80);
+```
+
+
+### Desplegando en Heroku
+
+Para desplegar en este servidor debemos realizar los siguientes pasos:
+
+1.- Nos autenticamos.
+
+```bash
+$ heroku login
+```
+
+2.- Creamos una nueva aplicación.
+
+```bash
+$ heroku create <nombre_app>
+```
+
+3.- Añadimos los cambios
+
+```bash
+$ git add .
+$ git commit -m "Deploy to Heroku"
+$ git push heroku master
+```
+
+También se ha configurado una tarea en el gulpfile para el despliegue en Heroku.
+
+```javascript
+gulp.task('deploy-heroku', function(){
+   return gulp.src('').pipe(shell([
+       'git add .'+
+       ';'+
+       'git commit -m "Deploy to Heroku"'+
+       ';'+
+       'git push heroku master'
+       ])) 
+});
+```
+
+5.- No obstante, si queremos que se produzca una actualización automática de Heroku cada vez que actualicemos el repositorio en Github, 
+debemos sincronizar la aplicación con el mismo estableciendo un webhook en los settings.
 
 
 
@@ -43,7 +114,7 @@ Esta tarea se ha automatizado en el **gulpfile.js** mediante la task: **"actuali
 
 [Libro en gitbook](https://josuetc94.gitbooks.io/practica3-sytw1617/content/)
 
-[IASS](10.6.128.176)
+[IAAS](10.6.128.176)
 
 [Heroku](https://p3-josue-nayra.herokuapp.com/)
 

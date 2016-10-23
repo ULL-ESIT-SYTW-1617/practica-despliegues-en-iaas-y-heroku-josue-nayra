@@ -33,53 +33,7 @@ gulp.task('push', function(){
 
 
 //---------------------------------------------------------------------------------
-//Ejecución del script generate-gitbook
-// gulp.task('generate-gitbook',function()
-// {
-//     if (!fs.existsSync(path.join(__dirname, 'gh-pages'))){
-//         fs.mkdirSync(path.join(__dirname, 'gh-pages'));
-//     }
-//     // new Promise((resolve,reject) =>{
-//     //   return run(path.join(__dirname,'scripts','generate-gitbook')).exec(); 
-//     // });
-//     new Promise((resolve, reject) =>{
-//       return gulp.src('').pipe(shell(['./scripts/losh generate-gitbook'])); 
-//     });
-// });
 
-// //---------------------------------------------------------------------------------
-
-// gulp.task('generate-wiki', function(){
-//     return run(path.join(__dirname,'scripts','generate-wiki')).exec();
-// });
-
-// //---------------------------------------------------------------------------------
-
-// gulp.task('deploy-gitbook', function()
-// {
-//     return gulp.src(path.join(__dirname,'gh-pages'))
-//           .pipe(ghPages());
-// });
-
-// //---------------------------------------------------------------------------------
-
-// gulp.task('eliminar_wiki', function(){
-//         fs.remove(path.resolve(path.join(__dirname,'wiki','.git')));
-// });
-
-//---------------------------------------------------------------------------------
-
-// gulp.task('deploy', ['generate-gitbook','generate-wiki', 'deploy-gitbook', 'eliminar_wiki'], function()
-// {
-//     console.log("Deploy task");
-//     git(path.resolve(path.join(__dirname,'wiki')))
-//         .init()
-//         .add('./*')
-//         .commit("Deploy to wiki")
-//         .addRemote('origin', json.repository.wiki)
-//         .push(['--force', 'origin', 'master:master'])
-//     // return gulp.src('').pipe(shell(['./scripts/losh deploy-wiki']));
-// });
 
 gulp.task('deploy', function(){
    return gulp.src(path.join(__dirname, 'scripts'))
@@ -94,6 +48,15 @@ gulp.task('actualizando_iaas', function(){
     return run(path.join(__dirname,'scripts','upload_iaas')).exec();
 });
 
+gulp.task('deploy-heroku', function(){
+   return gulp.src('').pipe(shell([
+       'git add .'+
+       ';'+
+       'git commit -m "Deploy to Heroku"'+
+       ';'+
+       'git push heroku master'
+       ])) 
+});
 //---------------------------------------------------------------------------------
 
 gulp.task('instalar_recursos',['instalar_dependencias','instalar_plugins']);
